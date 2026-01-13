@@ -1,255 +1,196 @@
-# 🏋️ Exercise API - Exercícios Físicos com Tradução PT-BR
+# 🏋️ Exercise API
 
-API REST para gestão de exercícios físicos com vídeos, GIFs e tradução automática para português brasileiro.
+API REST de exercícios físicos em português brasileiro com 1.324 exercícios, imagens WebP e busca inteligente.
 
-Baseado no [ExerciseDB](https://github.com/ExerciseDB/exercisedb-api) - o melhor banco de dados de exercícios disponível.
+## 📊 Recursos
 
-## 📊 O que você vai ter
+- 1.324 exercícios traduzidos para PT-BR
+- Imagens WebP otimizadas (~366 MB)
+- Busca inteligente com relevância
+- Filtros por parte do corpo, equipamento e músculo
+- Paginação e sugestões de exercícios relacionados
+- Autenticação via API Key + JWT (Supabase)
+- Documentação Swagger
 
-| Recurso | V1 (Gratuito) | V2 (PRO $29/mês) |
-|---------|---------------|------------------|
-| Exercícios | ~1.500 | ~11.000 |
-| GIFs animados | ✅ | ✅ |
-| Vídeos MP4 | ❌ | ✅ 15.000+ |
-| Imagens HD | ❌ | ✅ 20.000+ |
-| Instruções | ✅ | ✅ |
-| Dicas de treino | ❌ | ✅ |
-| Variações | ❌ | ✅ |
-| Keywords/SEO | ❌ | ✅ |
-
----
-
-## 🏰 OPERAÇÃO FORTALEZA - Pipeline ETL
-
-Pipeline desacoplado em 4 fases para extração, otimização e tradução de exercícios.
-
-### Estrutura de Diretórios
-
-```
-data/
-├── raw/
-│   ├── json/          # JSONs originais da API (Fase 1)
-│   └── media/         # GIFs/MP4s originais (Fase 1)
-├── optimized/
-│   └── media/         # WebPs otimizados (Fase 2)
-├── translated/
-│   └── json/          # JSONs traduzidos (Fase 3)
-└── logs/              # Relatórios e logs de erro
-```
-
-### Comandos do Pipeline
-
-| Comando | Descrição |
-|---------|-----------|
-| `npm run etl:check` | Fase 0: Verificação pré-voo (API, ffmpeg, disco) |
-| `npm run etl:extract` | Fase 1: Download inteligente com idempotência |
-| `npm run etl:refine` | Fase 2: Conversão para WebP animado |
-| `npm run etl:refine:cleanup` | Fase 2 + limpeza de originais |
-| `npm run etl:translate` | Fase 3: Tradução contextual com IA |
-| `npm run etl:load` | Fase 4: Carga no banco de dados |
-| `npm run etl:parallel` | 🚀 Executa fases em paralelo (recomendado) |
-| `npm run etl:all` | Executa todas as fases em sequência |
-
-### 🚀 Modo Paralelo (Recomendado)
-
-O modo paralelo executa as fases de forma inteligente:
-
-```
-Fase 1 (Extract) ──────────────────────────────────────►
-                    │
-                    ▼ (após 100 arquivos)
-Fase 2 (Refine)  ──────────────────────────────────────►
-                    │
-                    ▼ (após 100 arquivos)
-Fase 3 (Translate) ────────────────────────────────────►
-                                                        │
-                                                        ▼ (quando 2 e 3 terminam)
-Fase 4 (Load)                                          ──►
-```
-
-- **Fase 2 e 3** iniciam assim que houver 100+ arquivos baixados
-- **Fase 4** só inicia quando 2 e 3 terminarem
-- **Não trava a máquina**: usa metade dos CPUs e prioridade baixa
-
-### ⚠️ IMPORTANTE: Antes de Começar
+## 🚀 Instalação
 
 ```bash
-# 1. Instale as dependências
-npm install
-
-# 2. Configure o .env com sua API Key
-cp .env.example .env
-
-# 3. Execute a verificação pré-voo
-npm run etl:check
-
-# 4. Se tudo OK, inicie a extração
-npm run etl:extract
-```
-
-### Características do Pipeline
-
-- **Idempotência**: Pode parar e retomar sem duplicar dados
-- **Rate Limiting Humanizado**: Delays variáveis (0.8s-4s) para parecer navegação natural
-- **Pausas Aleatórias**: 5% de chance de pausas longas (5-15s) simulando usuário distraído
-- **User-Agents Rotativos**: 6 navegadores diferentes para variar fingerprint
-- **Captura Híbrida**: GIF > MP4 > log de erro
-- **WebP Otimizado**: Formato único, 400px, ~75% menor
-- **Tradução Contextual**: IA de Personal Trainer Brasileiro
-- **Validação Rigorosa**: Cruzamento de dados texto + mídia
-
-### Pré-requisitos
-
-```bash
-# ffmpeg para conversão de mídia (Fase 2)
-brew install ffmpeg  # macOS
-apt install ffmpeg   # Ubuntu
-```
-
-### Variáveis de Ambiente (ETL)
-
-```env
-# OpenAI para tradução contextual (opcional)
-OPENAI_API_KEY="sk-..."
-OPENAI_MODEL="gpt-4o-mini"
-
-# URL base para servir mídias
-MEDIA_BASE_URL="/media/exercises"
-```
-
----
-
-## 🚀 Setup Rápido
-
-```bash
-# 1. Entrar na pasta
+# Clonar repositório
+git clone https://github.com/franklinnilson/exercise-api.git
 cd exercise-api
 
-# 2. Instalar dependências
+# Instalar dependências
 npm install
 
-# 3. Configurar ambiente
+# Configurar ambiente
 cp .env.example .env
-# Edite o .env com sua API key
-
-# 4. Criar banco de dados
-npx prisma migrate dev --name init
-
-# 5. Executar scraping
-npm run scrape:exercises      # V1 com GIFs (gratuito)
-npm run scrape:v2             # V2 com vídeos ($29/mês)
 ```
 
-## 🔑 Obtendo API Key (GRATUITA)
-
-1. Acesse [RapidAPI - ExerciseDB](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb)
-2. Clique em **"Subscribe to Test"**
-3. Escolha o plano **Basic (FREE)**
-4. Copie sua `X-RapidAPI-Key`
-5. Adicione no `.env`:
-   ```
-   EXERCISEDB_API_KEY=sua_chave_aqui
-   ```
-
-### Planos RapidAPI
-
-| Plano | Preço | Requests/mês | Recursos |
-|-------|-------|--------------|----------|
-| Basic | FREE | 500 | V1 (GIFs) |
-| Pro | $29 | 20.000 | V1 + V2 (vídeos) |
-| Ultra | $79 | 100.000 | V1 + V2 |
-| Mega | $199 | 300.000 | V1 + V2 |
-
-## 🔄 Sistema de Tradução
-
-O scraper traduz automaticamente todos os campos para PT-BR:
-
-### Dicionário Local (Instantâneo)
-```
-chest → peito
-biceps → bíceps  
-dumbbell → halter
-barbell → barra
-beginner → iniciante
+Edite o `.env`:
+```env
+DATABASE_URL="mysql://root@localhost:3306/olym_exercise"
+API_KEY="sua_api_key_aqui"
+SUPABASE_URL="https://seu-projeto.supabase.co"
+SUPABASE_JWT_SECRET="seu_jwt_secret"
+PORT=3001
 ```
 
-### API de Tradução (MyMemory - Gratuito)
-- Textos longos (instruções, descrições)
-- 5.000 caracteres/dia grátis
-- Cache automático para evitar duplicatas
-
-## 📦 Schema do Banco
-
-```sql
-exercises
-├── id (VARCHAR 50)
-├── name / nameEn
-├── bodyPart / bodyPartEn
-├── target / targetEn
-├── equipment / equipmentEn
-├── gifUrl, videoUrl, imageUrl
-├── difficulty, category
-└── overview / overviewEn
-
-exercise_secondary_muscles
-├── muscle / muscleEn
-
-exercise_instructions
-├── stepOrder
-├── instruction / instructionEn
-
-exercise_tips (V2 only)
-├── tip / tipEn
-
-exercise_variations (V2 only)
-├── variation / variationEn
-
-exercise_keywords (V2 only)
-├── keyword / keywordEn
+Gerar API Key:
+```bash
+openssl rand -hex 32
 ```
 
-## 🛠️ Scripts
-
-| Script | Descrição |
-|--------|-----------|
-| `npm run scrape:exercises` | V1 com GIFs (tier gratuito) |
-| `npm run scrape:v2` | V2 com vídeos (plano PRO) |
-| `npm run scrape:free` | free-exercise-db (sem API key) |
-| `npm run export:json` | Exporta banco para JSON |
-| `npm run prisma:studio` | Interface visual do banco |
-
-## 📤 Exportar Dados
+## 🗄️ Banco de Dados
 
 ```bash
-npm run export:json
-# Gera: data/exercises-pt-br.json
+# Criar banco MySQL
+mysql -u root -e "CREATE DATABASE olym_exercise"
+
+# Aplicar schema
+npx prisma db push
+
+# Importar dados (se tiver o backup)
+mysql -u root olym_exercise < backup.sql
 ```
 
-## 🔗 Links Úteis
+## ▶️ Executar
 
-- [ExerciseDB GitHub](https://github.com/ExerciseDB/exercisedb-api)
-- [ExerciseDB Docs](https://edb-docs.up.railway.app/)
-- [RapidAPI - ExerciseDB](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb)
+```bash
+# Desenvolvimento
+npm run start:dev
 
-## 📝 Exemplo de Exercício Salvo
+# Produção
+npm run build
+npm run start:prod
+```
+
+A API estará disponível em:
+- API: http://localhost:3001
+- Swagger: http://localhost:3001/docs
+- Health: http://localhost:3001/health
+
+## 📚 Endpoints
+
+| Método | Endpoint | Auth | Descrição |
+|--------|----------|------|-----------|
+| GET | `/health` | ❌ | Health check |
+| GET | `/docs` | ❌ | Documentação Swagger |
+| GET | `/exercises` | ✅ | Lista com busca e filtros |
+| GET | `/exercises/:id` | ✅ | Detalhes do exercício |
+| GET | `/exercises/stats` | ✅ | Estatísticas da base |
+| GET | `/exercises/random` | ✅ | Exercícios aleatórios |
+| GET | `/exercises/body-part/:part` | ✅ | Por parte do corpo |
+| GET | `/exercises/equipment/:eq` | ✅ | Por equipamento |
+| GET | `/exercises/target/:target` | ✅ | Por músculo alvo |
+| GET | `/media/exercises/:id.webp` | ❌ | Imagem do exercício |
+
+## 🔐 Autenticação
+
+Endpoints protegidos requerem dois headers:
+
+```bash
+curl -H "x-api-key: SUA_API_KEY" \
+     -H "Authorization: Bearer TOKEN_JWT_SUPABASE" \
+     http://localhost:3001/exercises
+```
+
+## 🔍 Exemplos de Uso
+
+**Busca inteligente:**
+```bash
+curl "http://localhost:3001/exercises?q=supino" -H "x-api-key: ..." -H "Authorization: Bearer ..."
+```
+
+**Filtros combinados:**
+```bash
+curl "http://localhost:3001/exercises?bodyPart=peito&equipment=halter&size=10" -H "..."
+```
+
+**Múltiplos IDs:**
+```bash
+curl "http://localhost:3001/exercises?ids=0001,0002,0003" -H "..."
+```
+
+**Exercícios aleatórios:**
+```bash
+curl "http://localhost:3001/exercises/random?count=5&bodyPart=costas" -H "..."
+```
+
+## 📦 Resposta da API
 
 ```json
 {
-  "id": "0001",
-  "nome": "Rosca Bíceps com Barra",
-  "nomeOriginal": "Barbell Curl",
-  "parteCorpo": "braços",
-  "musculoAlvo": "bíceps",
-  "equipamento": "barra",
-  "dificuldade": "iniciante",
-  "gifUrl": "https://...",
-  "videoUrl": "https://...",
-  "instrucoes": [
+  "data": [
     {
-      "passo": 1,
-      "instrucao": "Fique em pé com os pés na largura dos ombros...",
-      "instrucaoOriginal": "Stand with feet shoulder-width apart..."
+      "id": "0001",
+      "name": "Supino reto com barra",
+      "nameEn": "Barbell Bench Press",
+      "bodyPart": "peito",
+      "target": "peitorais",
+      "equipment": "barra",
+      "gifUrl": "/media/exercises/0001.webp",
+      "secondaryMuscles": [
+        { "muscle": "tríceps" },
+        { "muscle": "deltoides anterior" }
+      ],
+      "instructions": [
+        { "stepOrder": 1, "instruction": "Deite no banco..." }
+      ]
     }
-  ]
+  ],
+  "meta": {
+    "total": 150,
+    "page": 1,
+    "size": 20,
+    "totalPages": 8
+  },
+  "suggestions": {
+    "message": "Veja também exercícios relacionados:",
+    "keywords": ["crucifixo", "flexão"],
+    "exercises": [...]
+  }
 }
 ```
+
+## 🐳 Docker
+
+```bash
+# Build
+docker build -t exercise-api .
+
+# Run (com volume para mídia)
+docker run -p 3001:3001 \
+  -v $(pwd)/data/media:/app/data/media \
+  --env-file .env \
+  exercise-api
+```
+
+## 📁 Estrutura
+
+```
+exercise-api/
+├── src/
+│   ├── exercises/       # Módulo de exercícios
+│   ├── health/          # Health checks
+│   ├── auth/            # Autenticação
+│   └── common/          # Guards, decorators
+├── prisma/
+│   └── schema.prisma    # Schema do banco
+├── public/              # Arquivos estáticos
+├── data/
+│   └── media/           # Imagens WebP (1.324 arquivos)
+├── Dockerfile
+├── DEPLOY.md            # Instruções de deploy
+└── docs/
+    └── ETL.md           # Documentação do pipeline ETL
+```
+
+## 📖 Documentação Adicional
+
+- [DEPLOY.md](./DEPLOY.md) - Instruções para deploy em produção
+- [docs/ETL.md](./docs/ETL.md) - Pipeline de extração e tradução de exercícios
+
+## 🔗 Links
+
+- [ExerciseDB](https://github.com/ExerciseDB/exercisedb-api) - Fonte dos dados originais
+- [Swagger UI](http://localhost:3001/docs) - Documentação interativa
