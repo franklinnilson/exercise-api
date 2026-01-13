@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-01-12T17:12:50.357Z",
+  "duration": 59.436,
+  "stats": {
+    "fetched": 10,
+    "translated": 10,
+    "loaded": 10,
+    "errors": [],
+    "tokensUsed": 3301,
+    "startTime": "2026-01-12T17:11:50.921Z"
+  },
+  "cost": 0.00108933
+}

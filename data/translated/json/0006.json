@@ -1,0 +1,35 @@
+{
+  "exerciseId": "0006",
+  "name": "alternate heel touchers",
+  "bodyPart": "waist",
+  "target": "abs",
+  "equipment": "body weight",
+  "secondaryMuscles": [
+    "obliques"
+  ],
+  "instructions": [
+    "Lie flat on your back with your knees bent and feet flat on the ground.",
+    "Extend your arms straight out to the sides, parallel to the ground.",
+    "Engaging your abs, lift your shoulders off the ground and reach your right hand towards your right heel.",
+    "Return to the starting position and repeat on the left side, reaching your left hand towards your left heel.",
+    "Continue alternating sides for the desired number of repetitions."
+  ],
+  "difficulty": "beginner",
+  "category": "strength",
+  "namePt": "toque alternado no calcanhar",
+  "bodyPartPt": "abdômen",
+  "targetPt": "abdominais",
+  "equipmentPt": "peso corporal",
+  "difficultyPt": "iniciante",
+  "descriptionPt": "O toque alternado no calcanhar é um exercício que foca na ativação dos músculos abdominais e melhora a flexibilidade do tronco. Ele promove um trabalho lateral, ajudando a fortalecer os oblíquos e a estabilizar a região do core.",
+  "secondaryMusclesPt": [
+    "oblíquos"
+  ],
+  "instructionsPt": [
+    "Deite-se de costas com os joelhos dobrados e os pés apoiados no chão.",
+    "Estenda os braços para os lados, paralelos ao chão.",
+    "Ativando os músculos abdominais, levante os ombros do chão e alcance a mão direita em direção ao calcanhar direito.",
+    "Retorne à posição inicial e repita do lado esquerdo, alcançando a mão esquerda em direção ao calcanhar esquerdo.",
+    "Continue alternando os lados pelo número desejado de repetições."
+  ]
+}

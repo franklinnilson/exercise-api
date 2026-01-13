@@ -1,0 +1,196 @@
+[
+  {
+    "id": "0001",
+    "name": "3/4 sit-up",
+    "namePt": "Abdominal 3/4",
+    "bodyPart": "waist",
+    "bodyPartPt": "abdômen",
+    "target": "abs",
+    "targetPt": "abdominais",
+    "equipment": "body weight",
+    "equipmentPt": "peso corporal",
+    "secondaryMuscles": [
+      "hip flexors",
+      "lower back"
+    ],
+    "secondaryMusclesPt": [
+      "flexores do quadril",
+      "lombar"
+    ],
+    "instructions": [
+      "Lie flat on your back with your knees bent and feet flat on the ground.",
+      "Place your hands behind your head with your elbows pointing outwards.",
+      "Engaging your abs, slowly lift your upper body off the ground, curling forward until your torso is at a 45-degree angle.",
+      "Pause for a moment at the top, then slowly lower your upper body back down to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Deite-se de costas com os joelhos flexionados e os pés apoiados no chão.",
+      "Coloque as mãos atrás da cabeça com os cotovelos apontando para fora.",
+      "Contraindo os músculos abdominais, levante lentamente a parte superior do corpo do chão, curvando-se para frente até que o tronco esteja em um ângulo de 45 graus.",
+      "Pause por um momento no topo, depois abaixe lentamente a parte superior do corpo de volta à posição inicial.",
+      "Repita pelo número desejado de repetições."
+    ],
+    "descriptionPt": "O abdominal 3/4 é um exercício que visa fortalecer a região abdominal, promovendo a flexão do tronco e ativando os músculos do core.",
+    "descriptionEn": "The 3/4 sit-up is an abdominal exercise performed with body weight. It involves curling the torso up to a 45-degree angle, engaging the abs, hip flexors, and lower back. This movement is commonly used to build core strength and stability.",
+    "difficulty": "beginner",
+    "difficultyPt": "iniciante",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": "https://exercisedb.p.rapidapi.com/image?exerciseId=0001&resolution=720"
+  },
+  {
+    "id": "0002",
+    "name": "45° side bend",
+    "namePt": "Flexão lateral a 45°",
+    "bodyPart": "waist",
+    "bodyPartPt": "abdômen",
+    "target": "abs",
+    "targetPt": "abdominais",
+    "equipment": "body weight",
+    "equipmentPt": "peso corporal",
+    "secondaryMuscles": [
+      "obliques"
+    ],
+    "secondaryMusclesPt": [
+      "oblíquos"
+    ],
+    "instructions": [
+      "Stand with your feet shoulder-width apart and your arms extended straight down by your sides.",
+      "Keeping your back straight and your core engaged, slowly bend your torso to one side, lowering your hand towards your knee.",
+      "Pause for a moment at the bottom, then slowly return to the starting position.",
+      "Repeat on the other side.",
+      "Continue alternating sides for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Fique em pé com os pés na largura dos ombros e os braços estendidos ao longo do corpo.",
+      "Mantendo as costas retas e o core ativado, incline lentamente o tronco para um lado, abaixando a mão em direção ao joelho.",
+      "Pause por um momento na parte inferior, depois retorne lentamente à posição inicial.",
+      "Repita do outro lado.",
+      "Continue alternando os lados pelo número desejado de repetições."
+    ],
+    "descriptionPt": "A flexão lateral a 45° é um exercício que trabalha os músculos oblíquos, ajudando a melhorar a flexibilidade e a força do tronco.",
+    "descriptionEn": "The 45° side bend is a bodyweight exercise targeting the abdominal muscles, particularly the obliques. It involves bending the torso to the side while standing, engaging the core for stability and control.",
+    "difficulty": "beginner",
+    "difficultyPt": "iniciante",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": "https://exercisedb.p.rapidapi.com/image?exerciseId=0002&resolution=720"
+  },
+  {
+    "id": "0003",
+    "name": "air bike",
+    "namePt": "Bicicleta no ar",
+    "bodyPart": "waist",
+    "bodyPartPt": "abdômen",
+    "target": "abs",
+    "targetPt": "abdominais",
+    "equipment": "body weight",
+    "equipmentPt": "peso corporal",
+    "secondaryMuscles": [
+      "hip flexors"
+    ],
+    "secondaryMusclesPt": [
+      "flexores do quadril"
+    ],
+    "instructions": [
+      "Lie flat on your back with your hands placed behind your head.",
+      "Lift your legs off the ground and bend your knees at a 90-degree angle.",
+      "Bring your right elbow towards your left knee while simultaneously straightening your right leg.",
+      "Return to the starting position and repeat the movement on the opposite side, bringing your left elbow towards your right knee while straightening your left leg.",
+      "Continue alternating sides in a pedaling motion for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Deite-se de costas com as mãos posicionadas atrás da cabeça.",
+      "Levante as pernas do chão e dobre os joelhos em um ângulo de 90 graus.",
+      "Traga o cotovelo direito em direção ao joelho esquerdo enquanto estica a perna direita.",
+      "Retorne à posição inicial e repita o movimento do lado oposto, trazendo o cotovelo esquerdo em direção ao joelho direito enquanto estica a perna esquerda.",
+      "Continue alternando os lados em um movimento de pedalar pelo número desejado de repetições."
+    ],
+    "descriptionPt": "A bicicleta no ar é um exercício eficaz para trabalhar a musculatura abdominal, promovendo a ativação dos músculos oblíquos e do reto abdominal.",
+    "descriptionEn": "The air bike is a bodyweight exercise targeting the abdominal muscles and hip flexors. It involves a pedaling motion while lying on your back, alternating elbow-to-knee contact to engage the core.",
+    "difficulty": "beginner",
+    "difficultyPt": "iniciante",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": "https://exercisedb.p.rapidapi.com/image?exerciseId=0003&resolution=720"
+  },
+  {
+    "id": "0006",
+    "name": "alternate heel touchers",
+    "namePt": "Toques alternados no calcanhar",
+    "bodyPart": "waist",
+    "bodyPartPt": "abdômen",
+    "target": "abs",
+    "targetPt": "abdominais",
+    "equipment": "body weight",
+    "equipmentPt": "peso corporal",
+    "secondaryMuscles": [
+      "obliques"
+    ],
+    "secondaryMusclesPt": [
+      "oblíquos"
+    ],
+    "instructions": [
+      "Lie flat on your back with your knees bent and feet flat on the ground.",
+      "Extend your arms straight out to the sides, parallel to the ground.",
+      "Engaging your abs, lift your shoulders off the ground and reach your right hand towards your right heel.",
+      "Return to the starting position and repeat on the left side, reaching your left hand towards your left heel.",
+      "Continue alternating sides for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Deite-se de costas com os joelhos flexionados e os pés apoiados no chão.",
+      "Estenda os braços para os lados, paralelos ao chão.",
+      "Contraindo os músculos abdominais, levante os ombros do chão e alcance a mão direita em direção ao calcanhar direito.",
+      "Retorne à posição inicial e repita do lado esquerdo, alcançando a mão esquerda em direção ao calcanhar esquerdo.",
+      "Continue alternando os lados pelo número desejado de repetições."
+    ],
+    "descriptionPt": "Os toques alternados no calcanhar são um exercício que foca na ativação dos músculos abdominais, promovendo a rotação do tronco e a flexibilidade.",
+    "descriptionEn": "Alternate heel touchers is a bodyweight exercise targeting the abdominal muscles, particularly the obliques. It involves lying on your back, lifting your shoulders, and reaching side to side to touch your heels, engaging your core throughout.",
+    "difficulty": "beginner",
+    "difficultyPt": "iniciante",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": "https://exercisedb.p.rapidapi.com/image?exerciseId=0006&resolution=720"
+  },
+  {
+    "id": "0007",
+    "name": "alternate lateral pulldown",
+    "namePt": "Puxada lateral alternada na polia",
+    "bodyPart": "back",
+    "bodyPartPt": "costas",
+    "target": "lats",
+    "targetPt": "dorsais",
+    "equipment": "cable",
+    "equipmentPt": "polia",
+    "secondaryMuscles": [
+      "biceps",
+      "rhomboids"
+    ],
+    "secondaryMusclesPt": [
+      "bíceps",
+      "rhomboids"
+    ],
+    "instructions": [
+      "Sit on the cable machine with your back straight and feet flat on the ground.",
+      "Grasp the handles with an overhand grip, slightly wider than shoulder-width apart.",
+      "Lean back slightly and pull the handles towards your chest, squeezing your shoulder blades together.",
+      "Pause for a moment at the peak of the movement, then slowly release the handles back to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Sente-se na máquina de polia com as costas retas e os pés apoiados no chão.",
+      "Segure as alças com uma pegada pronada, um pouco mais larga que a largura dos ombros.",
+      "Incline-se levemente para trás e puxe as alças em direção ao peito, apertando as escápulas juntas.",
+      "Pause por um momento no pico do movimento, depois solte lentamente as alças de volta à posição inicial.",
+      "Repita pelo número desejado de repetições."
+    ],
+    "descriptionPt": "A puxada lateral alternada na polia é um exercício que fortalece os músculos das costas e melhora a postura, ativando a musculatura estabilizadora.",
+    "descriptionEn": "The alternate lateral pulldown is a cable machine exercise targeting the latissimus dorsi, with secondary emphasis on the biceps and rhomboids. It involves pulling handles towards the chest in an alternating fashion, focusing on back strength and muscle engagement.",
+    "difficulty": "beginner",
+    "difficultyPt": "iniciante",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": "https://exercisedb.p.rapidapi.com/image?exerciseId=0007&resolution=720"
+  }
+]

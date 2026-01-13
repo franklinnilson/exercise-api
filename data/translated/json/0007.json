@@ -1,0 +1,37 @@
+{
+  "exerciseId": "0007",
+  "name": "alternate lateral pulldown",
+  "bodyPart": "back",
+  "target": "lats",
+  "equipment": "cable",
+  "secondaryMuscles": [
+    "biceps",
+    "rhomboids"
+  ],
+  "instructions": [
+    "Sit on the cable machine with your back straight and feet flat on the ground.",
+    "Grasp the handles with an overhand grip, slightly wider than shoulder-width apart.",
+    "Lean back slightly and pull the handles towards your chest, squeezing your shoulder blades together.",
+    "Pause for a moment at the peak of the movement, then slowly release the handles back to the starting position.",
+    "Repeat for the desired number of repetitions."
+  ],
+  "difficulty": "beginner",
+  "category": "strength",
+  "namePt": "puxada alta alternada",
+  "bodyPartPt": "costas",
+  "targetPt": "dorsais",
+  "equipmentPt": "polia",
+  "difficultyPt": "iniciante",
+  "descriptionPt": "A puxada alta alternada é um exercício que visa fortalecer os músculos das costas, especialmente os dorsais. Ele também melhora a postura e a estabilidade do tronco, sendo uma ótima adição a qualquer rotina de treinamento de força.",
+  "secondaryMusclesPt": [
+    "bíceps",
+    "rhomboids"
+  ],
+  "instructionsPt": [
+    "Sente-se na máquina de polia com as costas retas e os pés apoiados no chão.",
+    "Segure as alças com uma pegada pronada, ligeiramente mais larga que a largura dos ombros.",
+    "Incline-se levemente para trás e puxe as alças em direção ao peito, apertando as escápulas juntas.",
+    "Faça uma pausa por um momento no pico do movimento e, em seguida, solte lentamente as alças de volta à posição inicial.",
+    "Repita pelo número desejado de repetições."
+  ]
+}

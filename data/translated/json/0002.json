@@ -1,0 +1,36 @@
+{
+  "exerciseId": "0002",
+  "name": "45° side bend",
+  "bodyPart": "waist",
+  "target": "abs",
+  "equipment": "body weight",
+  "secondaryMuscles": [
+    "obliques"
+  ],
+  "instructions": [
+    "Stand with your feet shoulder-width apart and your arms extended straight down by your sides.",
+    "Keeping your back straight and your core engaged, slowly bend your torso to one side, lowering your hand towards your knee.",
+    "Pause for a moment at the bottom, then slowly return to the starting position.",
+    "Repeat on the other side.",
+    "Continue alternating sides for the desired number of repetitions."
+  ],
+  "description": "The 45° side bend is a bodyweight exercise targeting the abdominal muscles, particularly the obliques. It involves bending the torso to the side while standing, engaging the core for stability and control.",
+  "difficulty": "beginner",
+  "category": "strength",
+  "bodyPartPt": "abdômen",
+  "targetPt": "abdominais",
+  "equipmentPt": "peso corporal",
+  "difficultyPt": "iniciante",
+  "namePt": "Flexão lateral 45°",
+  "descriptionPt": "A flexão lateral 45° é um exercício com o peso do corpo que foca nos músculos abdominais, especialmente nos oblíquos. Envolve inclinar o tronco para o lado enquanto está em pé, ativando o core para estabilidade e controle.",
+  "secondaryMusclesPt": [
+    "oblíquos"
+  ],
+  "instructionsPt": [
+    "Fique em pé com os pés na largura dos ombros e os braços estendidos ao longo do corpo.",
+    "Mantendo as costas retas e o core ativado, incline lentamente o tronco para um lado, abaixando a mão em direção ao joelho.",
+    "Pausa por um momento na parte inferior, depois retorne lentamente à posição inicial.",
+    "Repita do outro lado.",
+    "Continue alternando os lados pelo número desejado de repetições."
+  ]
+}

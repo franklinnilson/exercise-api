@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-01-12T19:18:40.498Z",
+  "duration": 0.787,
+  "durationMinutes": 0,
+  "stats": {
+    "fetched": 0,
+    "translated": 0,
+    "loaded": 0,
+    "skipped": 0,
+    "mediaDownloaded": 0,
+    "mediaSkipped": 0,
+    "mediaErrors": 0,
+    "totalGifSize": 0,
+    "totalWebpSize": 0,
+    "errors": [
+      "Invalid array length"
+    ],
+    "tokensUsed": 0,
+    "startTime": "2026-01-12T19:18:39.710Z"
+  },
+  "cost": 0
+}

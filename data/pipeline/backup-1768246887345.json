@@ -1,0 +1,816 @@
+[
+  {
+    "id": "0001",
+    "name": "3/4 sit-up",
+    "namePt": "Abdominal 3/4",
+    "bodyPart": "waist",
+    "bodyPartPt": "abdômen",
+    "target": "abs",
+    "targetPt": "abdominais",
+    "equipment": "body weight",
+    "equipmentPt": "peso corporal",
+    "secondaryMuscles": [
+      "hip flexors",
+      "lower back"
+    ],
+    "secondaryMusclesPt": [
+      "flexores do quadril",
+      "lombar"
+    ],
+    "instructions": [
+      "Lie flat on your back with your knees bent and feet flat on the ground.",
+      "Place your hands behind your head with your elbows pointing outwards.",
+      "Engaging your abs, slowly lift your upper body off the ground, curling forward until your torso is at a 45-degree angle.",
+      "Pause for a moment at the top, then slowly lower your upper body back down to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Deite-se de costas com os joelhos flexionados e os pés apoiados no chão.",
+      "Coloque as mãos atrás da cabeça com os cotovelos apontando para fora.",
+      "Ativando os músculos abdominais, levante lentamente a parte superior do corpo do chão, curvando-se para frente até que o tronco forme um ângulo de 45 graus.",
+      "Faça uma pausa no topo, depois abaixe lentamente a parte superior do corpo de volta à posição inicial.",
+      "Repita pelo número desejado de repetições."
+    ],
+    "descriptionPt": "O abdominal 3/4 é um exercício que foca na ativação dos músculos abdominais superiores, promovendo força e resistência na região do core.",
+    "descriptionEn": "The 3/4 sit-up is an abdominal exercise performed with body weight. It involves curling the torso up to a 45-degree angle, engaging the abs, hip flexors, and lower back. This movement is commonly used to build core strength and stability.",
+    "difficulty": "beginner",
+    "difficultyPt": "iniciante",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": null
+  },
+  {
+    "id": "0002",
+    "name": "45° side bend",
+    "namePt": "Flexão lateral a 45°",
+    "bodyPart": "waist",
+    "bodyPartPt": "abdômen",
+    "target": "abs",
+    "targetPt": "abdominais",
+    "equipment": "body weight",
+    "equipmentPt": "peso corporal",
+    "secondaryMuscles": [
+      "obliques"
+    ],
+    "secondaryMusclesPt": [
+      "oblíquos"
+    ],
+    "instructions": [
+      "Stand with your feet shoulder-width apart and your arms extended straight down by your sides.",
+      "Keeping your back straight and your core engaged, slowly bend your torso to one side, lowering your hand towards your knee.",
+      "Pause for a moment at the bottom, then slowly return to the starting position.",
+      "Repeat on the other side.",
+      "Continue alternating sides for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Fique em pé com os pés na largura dos ombros e os braços estendidos ao longo do corpo.",
+      "Mantendo as costas retas e o core ativado, incline lentamente o tronco para um lado, abaixando a mão em direção ao joelho.",
+      "Faça uma pausa na parte inferior, depois retorne lentamente à posição inicial.",
+      "Repita do outro lado.",
+      "Continue alternando os lados pelo número desejado de repetições."
+    ],
+    "descriptionPt": "A flexão lateral a 45° é um exercício que trabalha os músculos oblíquos, ajudando a melhorar a flexibilidade e a força lateral do tronco.",
+    "descriptionEn": "The 45° side bend is a bodyweight exercise targeting the abdominal muscles, particularly the obliques. It involves bending the torso to the side while standing, engaging the core for stability and control.",
+    "difficulty": "beginner",
+    "difficultyPt": "iniciante",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": null
+  },
+  {
+    "id": "0003",
+    "name": "air bike",
+    "namePt": "Bicicleta no ar",
+    "bodyPart": "waist",
+    "bodyPartPt": "abdômen",
+    "target": "abs",
+    "targetPt": "abdominais",
+    "equipment": "body weight",
+    "equipmentPt": "peso corporal",
+    "secondaryMuscles": [
+      "hip flexors"
+    ],
+    "secondaryMusclesPt": [
+      "flexores do quadril"
+    ],
+    "instructions": [
+      "Lie flat on your back with your hands placed behind your head.",
+      "Lift your legs off the ground and bend your knees at a 90-degree angle.",
+      "Bring your right elbow towards your left knee while simultaneously straightening your right leg.",
+      "Return to the starting position and repeat the movement on the opposite side, bringing your left elbow towards your right knee while straightening your left leg.",
+      "Continue alternating sides in a pedaling motion for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Deite-se de costas com as mãos posicionadas atrás da cabeça.",
+      "Levante as pernas do chão e flexione os joelhos em um ângulo de 90 graus.",
+      "Traga o cotovelo direito em direção ao joelho esquerdo enquanto estica a perna direita.",
+      "Retorne à posição inicial e repita o movimento do lado oposto, trazendo o cotovelo esquerdo em direção ao joelho direito enquanto estica a perna esquerda.",
+      "Continue alternando os lados em um movimento de pedalada pelo número desejado de repetições."
+    ],
+    "descriptionPt": "A bicicleta no ar é um exercício eficaz para trabalhar os músculos abdominais e oblíquos, promovendo um fortalecimento dinâmico do core.",
+    "descriptionEn": "The air bike is a bodyweight exercise targeting the abdominal muscles and hip flexors. It involves a pedaling motion while lying on your back, alternating elbow-to-knee contact to engage the core.",
+    "difficulty": "beginner",
+    "difficultyPt": "iniciante",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": null
+  },
+  {
+    "id": "0006",
+    "name": "alternate heel touchers",
+    "namePt": "Toque alternado no calcanhar",
+    "bodyPart": "waist",
+    "bodyPartPt": "abdômen",
+    "target": "abs",
+    "targetPt": "abdominais",
+    "equipment": "body weight",
+    "equipmentPt": "peso corporal",
+    "secondaryMuscles": [
+      "obliques"
+    ],
+    "secondaryMusclesPt": [
+      "oblíquos"
+    ],
+    "instructions": [
+      "Lie flat on your back with your knees bent and feet flat on the ground.",
+      "Extend your arms straight out to the sides, parallel to the ground.",
+      "Engaging your abs, lift your shoulders off the ground and reach your right hand towards your right heel.",
+      "Return to the starting position and repeat on the left side, reaching your left hand towards your left heel.",
+      "Continue alternating sides for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Deite-se de costas com os joelhos flexionados e os pés apoiados no chão.",
+      "Estenda os braços para os lados, paralelos ao chão.",
+      "Ativando os músculos abdominais, levante os ombros do chão e alcance a mão direita em direção ao calcanhar direito.",
+      "Retorne à posição inicial e repita do lado esquerdo, alcançando a mão esquerda em direção ao calcanhar esquerdo.",
+      "Continue alternando os lados pelo número desejado de repetições."
+    ],
+    "descriptionPt": "O toque alternado no calcanhar é um exercício que foca na ativação dos músculos abdominais laterais, melhorando a força e a estabilidade do core.",
+    "descriptionEn": "Alternate heel touchers is a bodyweight exercise targeting the abdominal muscles, particularly the obliques. It involves lying on your back, lifting your shoulders, and reaching side to side to touch your heels, engaging your core throughout.",
+    "difficulty": "beginner",
+    "difficultyPt": "iniciante",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": null
+  },
+  {
+    "id": "0007",
+    "name": "alternate lateral pulldown",
+    "namePt": "Puxada lateral alternada na polia",
+    "bodyPart": "back",
+    "bodyPartPt": "costas",
+    "target": "lats",
+    "targetPt": "dorsais",
+    "equipment": "cable",
+    "equipmentPt": "polia",
+    "secondaryMuscles": [
+      "biceps",
+      "rhomboids"
+    ],
+    "secondaryMusclesPt": [
+      "bíceps",
+      "rhomboids"
+    ],
+    "instructions": [
+      "Sit on the cable machine with your back straight and feet flat on the ground.",
+      "Grasp the handles with an overhand grip, slightly wider than shoulder-width apart.",
+      "Lean back slightly and pull the handles towards your chest, squeezing your shoulder blades together.",
+      "Pause for a moment at the peak of the movement, then slowly release the handles back to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Sente-se na máquina de polia com as costas retas e os pés apoiados no chão.",
+      "Segure as alças com uma pegada pronada, um pouco mais larga que a largura dos ombros.",
+      "Incline-se levemente para trás e puxe as alças em direção ao peito, apertando as escápulas.",
+      "Faça uma pausa no pico do movimento, depois solte lentamente as alças de volta à posição inicial.",
+      "Repita pelo número desejado de repetições."
+    ],
+    "descriptionPt": "A puxada lateral alternada na polia é um exercício que trabalha a musculatura das costas e dos ombros, promovendo força e definição muscular.",
+    "descriptionEn": "The alternate lateral pulldown is a cable machine exercise targeting the latissimus dorsi, with secondary emphasis on the biceps and rhomboids. It involves pulling handles towards the chest in an alternating fashion, focusing on back strength and muscle engagement.",
+    "difficulty": "beginner",
+    "difficultyPt": "iniciante",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": null
+  },
+  {
+    "id": "0009",
+    "name": "assisted chest dip (kneeling)",
+    "namePt": "Mergulho assistido para peito (ajoelhado)",
+    "bodyPart": "chest",
+    "bodyPartPt": "peito",
+    "target": "pectorals",
+    "targetPt": "peitorais",
+    "equipment": "leverage machine",
+    "equipmentPt": "máquina",
+    "secondaryMuscles": [
+      "triceps",
+      "shoulders"
+    ],
+    "secondaryMusclesPt": [
+      "tríceps",
+      "ombros"
+    ],
+    "instructions": [
+      "Adjust the machine to your desired height and secure your knees on the pad.",
+      "Grasp the handles with your palms facing down and your arms fully extended.",
+      "Lower your body by bending your elbows until your upper arms are parallel to the floor.",
+      "Pause for a moment, then push yourself back up to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Ajuste a máquina na altura desejada e apoie os joelhos no suporte.",
+      "Segure as alças com as palmas voltadas para baixo e os braços totalmente estendidos.",
+      "Abaixe o corpo flexionando os cotovelos até que os braços superiores fiquem paralelos ao chão.",
+      "Faça uma pausa, depois empurre-se de volta à posição inicial.",
+      "Repita pelo número desejado de repetições."
+    ],
+    "descriptionPt": "O mergulho assistido para peito é um exercício que foca no fortalecimento dos músculos peitorais e tríceps, ideal para iniciantes.",
+    "descriptionEn": "The assisted chest dip (kneeling) is a chest-focused exercise performed on a leverage machine, where the user kneels on a pad for support. This machine-assisted variation helps reduce the load, making it accessible for those building strength or learning proper dip technique.",
+    "difficulty": "beginner",
+    "difficultyPt": "iniciante",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": null
+  },
+  {
+    "id": "0010",
+    "name": "assisted hanging knee raise with throw down",
+    "namePt": "Elevação de joelhos assistida na barra com queda",
+    "bodyPart": "waist",
+    "bodyPartPt": "abdômen",
+    "target": "abs",
+    "targetPt": "abdominais",
+    "equipment": "assisted",
+    "equipmentPt": "assistido",
+    "secondaryMuscles": [
+      "hip flexors",
+      "lower back"
+    ],
+    "secondaryMusclesPt": [
+      "flexores do quadril",
+      "lombar"
+    ],
+    "instructions": [
+      "Hang from a pull-up bar with your arms fully extended and your palms facing away from you.",
+      "Engage your core and lift your knees towards your chest, keeping your legs together.",
+      "Once your knees are at chest level, explosively throw your legs down towards the ground, extending them fully.",
+      "Allow your legs to swing back up and repeat the movement for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Pendure-se em uma barra fixa com os braços totalmente estendidos e as palmas voltadas para longe de você.",
+      "Ative o core e levante os joelhos em direção ao peito, mantendo as pernas juntas.",
+      "Uma vez que os joelhos estejam na altura do peito, jogue explosivamente as pernas para baixo em direção ao chão, estendendo-as completamente.",
+      "Permita que as pernas balancem de volta para cima e repita o movimento pelo número desejado de repetições."
+    ],
+    "descriptionPt": "A elevação de joelhos assistida na barra com queda é um exercício que trabalha a musculatura abdominal e melhora a força do core.",
+    "descriptionEn": "The assisted hanging knee raise with throw down is an advanced core exercise that targets the abdominal muscles, with additional engagement of the hip flexors and lower back. The movement involves hanging from a pull-up bar, raising the knees to the chest, and then explosively throwing the legs downward, requiring significant core strength, coordination, and control.",
+    "difficulty": "advanced",
+    "difficultyPt": "avançado",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": null
+  },
+  {
+    "id": "0011",
+    "name": "assisted hanging knee raise",
+    "namePt": "Elevação de joelhos assistida na barra",
+    "bodyPart": "waist",
+    "bodyPartPt": "abdômen",
+    "target": "abs",
+    "targetPt": "abdominais",
+    "equipment": "assisted",
+    "equipmentPt": "assistido",
+    "secondaryMuscles": [
+      "hip flexors"
+    ],
+    "secondaryMusclesPt": [
+      "flexores do quadril"
+    ],
+    "instructions": [
+      "Hang from a pull-up bar with your arms fully extended and your palms facing away from you.",
+      "Engage your core muscles and lift your knees towards your chest, bending at the hips and knees.",
+      "Pause for a moment at the top of the movement, squeezing your abs.",
+      "Slowly lower your legs back down to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Pendure-se em uma barra fixa com os braços totalmente estendidos e as palmas voltadas para longe de você.",
+      "Ative os músculos do core e levante os joelhos em direção ao peito, flexionando os quadris e joelhos.",
+      "Faça uma pausa no topo do movimento, apertando os abdominais.",
+      "Abaixe lentamente as pernas de volta à posição inicial.",
+      "Repita pelo número desejado de repetições."
+    ],
+    "descriptionPt": "A elevação de joelhos assistida na barra é um exercício que foca no fortalecimento dos músculos abdominais, promovendo estabilidade e controle.",
+    "descriptionEn": "The assisted hanging knee raise is an abdominal exercise performed while hanging from a pull-up bar, using assistance to help lift the knees toward the chest. It primarily targets the abs and also works the hip flexors.",
+    "difficulty": "beginner",
+    "difficultyPt": "iniciante",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": null
+  },
+  {
+    "id": "0012",
+    "name": "assisted lying leg raise with lateral throw down",
+    "namePt": "Elevação de pernas assistida deitado com queda lateral",
+    "bodyPart": "waist",
+    "bodyPartPt": "abdômen",
+    "target": "abs",
+    "targetPt": "abdominais",
+    "equipment": "assisted",
+    "equipmentPt": "assistido",
+    "secondaryMuscles": [
+      "hip flexors",
+      "obliques"
+    ],
+    "secondaryMusclesPt": [
+      "flexores do quadril",
+      "oblíquos"
+    ],
+    "instructions": [
+      "Lie flat on your back with your legs extended and your arms by your sides.",
+      "Place your hands under your glutes for support.",
+      "Engage your abs and lift your legs off the ground, keeping them straight.",
+      "While keeping your legs together, lower them to one side until they are a few inches above the ground.",
+      "Pause for a moment, then lift your legs back to the starting position.",
+      "Repeat the movement to the other side.",
+      "Continue alternating sides for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Deite-se de costas com as pernas estendidas e os braços ao lado do corpo.",
+      "Coloque as mãos sob os glúteos para suporte.",
+      "Ative os abdominais e levante as pernas do chão, mantendo-as retas.",
+      "Enquanto mantém as pernas juntas, abaixe-as para um lado até que fiquem a alguns centímetros do chão.",
+      "Faça uma pausa, depois levante as pernas de volta à posição inicial.",
+      "Repita o movimento para o outro lado.",
+      "Continue alternando os lados pelo número desejado de repetições."
+    ],
+    "descriptionPt": "A elevação de pernas assistida deitado com queda lateral é um exercício que trabalha os músculos abdominais e oblíquos, promovendo força e controle lateral.",
+    "descriptionEn": "The assisted lying leg raise with lateral throw down is an abdominal exercise that targets the abs while also engaging the hip flexors and obliques. The movement involves lifting the legs while lying on your back, then lowering them to each side in a controlled manner, which challenges core stability and strength.",
+    "difficulty": "intermediate",
+    "difficultyPt": "intermediário",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": null
+  },
+  {
+    "id": "0013",
+    "name": "assisted lying leg raise with throw down",
+    "namePt": "Elevação de pernas assistida deitado com queda",
+    "bodyPart": "waist",
+    "bodyPartPt": "abdômen",
+    "target": "abs",
+    "targetPt": "abdominais",
+    "equipment": "assisted",
+    "equipmentPt": "assistido",
+    "secondaryMuscles": [
+      "hip flexors",
+      "quadriceps"
+    ],
+    "secondaryMusclesPt": [
+      "flexores do quadril",
+      "quadriceps"
+    ],
+    "instructions": [
+      "Lie flat on your back with your legs extended and your arms by your sides.",
+      "Place your hands under your glutes for support.",
+      "Engage your core and lift your legs off the ground, keeping them straight.",
+      "Raise your legs until they are perpendicular to the ground.",
+      "Lower your legs back down to the starting position.",
+      "Simultaneously, throw your legs down towards the ground, keeping them straight.",
+      "Raise your legs back up to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Deite-se de costas com as pernas estendidas e os braços ao lado do corpo.",
+      "Coloque as mãos sob os glúteos para suporte.",
+      "Ative o core e levante as pernas do chão, mantendo-as retas.",
+      "Levante as pernas até que fiquem perpendiculares ao chão.",
+      "Abaixe as pernas de volta à posição inicial.",
+      "Simultaneamente, jogue as pernas para baixo em direção ao chão, mantendo-as retas.",
+      "Levante as pernas de volta à posição inicial.",
+      "Repita pelo número desejado de repetições."
+    ],
+    "descriptionPt": "A elevação de pernas assistida deitado com queda é um exercício que fortalece a musculatura abdominal, promovendo resistência e controle.",
+    "descriptionEn": "The assisted lying leg raise with throw down is an abdominal exercise that targets the abs while also engaging the hip flexors and quadriceps. The movement involves raising the legs while lying on your back, then forcefully lowering them (throwing them down) and raising them again, often with a partner providing resistance or assistance.",
+    "difficulty": "intermediate",
+    "difficultyPt": "intermediário",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": null
+  },
+  {
+    "id": "0014",
+    "name": "assisted motion russian twist",
+    "namePt": "torção russa assistida",
+    "bodyPart": "waist",
+    "bodyPartPt": "abdômen",
+    "target": "abs",
+    "targetPt": "abdominais",
+    "equipment": "medicine ball",
+    "equipmentPt": "medicine ball",
+    "secondaryMuscles": [
+      "obliques",
+      "lower back"
+    ],
+    "secondaryMusclesPt": [
+      "oblíquos",
+      "lombar"
+    ],
+    "instructions": [
+      "Sit on the ground with your knees bent and feet flat on the floor.",
+      "Hold the medicine ball with both hands in front of your chest.",
+      "Lean back slightly, engaging your abs and keeping your back straight.",
+      "Slowly twist your torso to the right, bringing the medicine ball towards the right side of your body.",
+      "Pause for a moment, then twist your torso to the left, bringing the medicine ball towards the left side of your body.",
+      "Continue alternating sides for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Sente-se no chão com os joelhos flexionados e os pés apoiados no chão.",
+      "Segure a bola medicinal com ambas as mãos na frente do peito.",
+      "Incline-se levemente para trás, ativando os músculos abdominais e mantendo as costas retas.",
+      "Gire lentamente o tronco para a direita, trazendo a bola medicinal em direção ao lado direito do corpo.",
+      "Pause por um momento, depois gire o tronco para a esquerda, trazendo a bola medicinal em direção ao lado esquerdo do corpo.",
+      "Continue alternando os lados pelo número desejado de repetições."
+    ],
+    "descriptionPt": "O exercício de torção russa assistida trabalha os músculos oblíquos e o core, promovendo estabilidade e força na região abdominal.",
+    "descriptionEn": "The assisted motion Russian twist is a core exercise performed with a medicine ball. It targets the abdominal muscles and also engages the obliques and lower back. The movement involves twisting the torso from side to side while holding a medicine ball, which adds resistance and helps build core strength and stability.",
+    "difficulty": "beginner",
+    "difficultyPt": "iniciante",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": null
+  },
+  {
+    "id": "0015",
+    "name": "assisted parallel close grip pull-up",
+    "namePt": "barra fixa assistida com pegada fechada",
+    "bodyPart": "back",
+    "bodyPartPt": "costas",
+    "target": "lats",
+    "targetPt": "dorsais",
+    "equipment": "leverage machine",
+    "equipmentPt": "máquina",
+    "secondaryMuscles": [
+      "biceps",
+      "forearms"
+    ],
+    "secondaryMusclesPt": [
+      "bíceps",
+      "antebraços"
+    ],
+    "instructions": [
+      "Adjust the machine to your desired weight and height.",
+      "Place your hands on the parallel bars with a close grip, palms facing each other.",
+      "Hang from the bars with your arms fully extended and your feet off the ground.",
+      "Engage your back muscles and pull your body up towards the bars, keeping your elbows close to your body.",
+      "Continue pulling until your chin is above the bars.",
+      "Pause for a moment at the top, then slowly lower your body back down to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Ajuste a máquina para o peso e altura desejados.",
+      "Coloque suas mãos nas barras paralelas com uma pegada fechada, com as palmas voltadas uma para a outra.",
+      "Pendure-se nas barras com os braços totalmente estendidos e os pés fora do chão.",
+      "Ative os músculos das costas e puxe seu corpo em direção às barras, mantendo os cotovelos próximos ao corpo.",
+      "Continue puxando até que seu queixo esteja acima das barras.",
+      "Pause por um momento no topo, depois abaixe lentamente seu corpo de volta à posição inicial.",
+      "Repita pelo número desejado de repetições."
+    ],
+    "descriptionPt": "Este exercício foca no fortalecimento das costas e bíceps, utilizando uma pegada fechada para aumentar a ativação muscular.",
+    "descriptionEn": "The assisted parallel close grip pull-up is a back exercise performed on a leverage machine that helps users perform pull-ups with added support, making it easier to complete the movement and focus on form.",
+    "difficulty": "beginner",
+    "difficultyPt": "iniciante",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": null
+  },
+  {
+    "id": "0016",
+    "name": "assisted prone hamstring",
+    "namePt": "flexão de pernas assistida",
+    "bodyPart": "upper legs",
+    "bodyPartPt": "coxas",
+    "target": "hamstrings",
+    "targetPt": "posteriores da coxa",
+    "equipment": "assisted",
+    "equipmentPt": "assistido",
+    "secondaryMuscles": [
+      "glutes",
+      "lower back"
+    ],
+    "secondaryMusclesPt": [
+      "glúteos",
+      "lombar"
+    ],
+    "instructions": [
+      "Lie face down on a mat or bench with your legs fully extended.",
+      "Have a partner or use a resistance band to secure your ankles.",
+      "Engage your hamstrings and lift your legs towards your glutes, keeping your knees straight.",
+      "Pause for a moment at the top, then slowly lower your legs back down to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Deite-se de barriga para baixo em um colchonete ou banco com as pernas totalmente estendidas.",
+      "Tenha um parceiro ou use uma faixa de resistência para segurar seus tornozelos.",
+      "Ative os músculos isquiotibiais e levante as pernas em direção aos glúteos, mantendo os joelhos retos.",
+      "Pause por um momento no topo, depois abaixe lentamente as pernas de volta à posição inicial.",
+      "Repita pelo número desejado de repetições."
+    ],
+    "descriptionPt": "O exercício de flexão de pernas assistida é eficaz para fortalecer os isquiotibiais, promovendo a estabilidade e força na parte posterior das pernas.",
+    "descriptionEn": "The assisted prone hamstring exercise targets the hamstrings with assistance from a partner or resistance band, making it accessible for those developing strength or needing support. It involves lying face down and curling the legs towards the glutes, focusing on hamstring engagement.",
+    "difficulty": "beginner",
+    "difficultyPt": "iniciante",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": null
+  },
+  {
+    "id": "0017",
+    "name": "assisted pull-up",
+    "namePt": "barra fixa assistida",
+    "bodyPart": "back",
+    "bodyPartPt": "costas",
+    "target": "lats",
+    "targetPt": "dorsais",
+    "equipment": "leverage machine",
+    "equipmentPt": "máquina",
+    "secondaryMuscles": [
+      "biceps",
+      "forearms"
+    ],
+    "secondaryMusclesPt": [
+      "bíceps",
+      "antebraços"
+    ],
+    "instructions": [
+      "Adjust the machine to your desired weight and height settings.",
+      "Grasp the handles with an overhand grip, slightly wider than shoulder-width apart.",
+      "Hang with your arms fully extended and your feet off the ground.",
+      "Engage your back muscles and pull your body up towards the handles, keeping your elbows close to your body.",
+      "Continue pulling until your chin is above the handles.",
+      "Pause for a moment at the top, then slowly lower your body back down to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Ajuste a máquina para o peso e altura desejados.",
+      "Segure as alças com uma pegada pronada, ligeiramente mais larga que a largura dos ombros.",
+      "Pendure-se com os braços totalmente estendidos e os pés fora do chão.",
+      "Ative os músculos das costas e puxe seu corpo em direção às alças, mantendo os cotovelos próximos ao corpo.",
+      "Continue puxando até que seu queixo esteja acima das alças.",
+      "Pause por um momento no topo, depois abaixe lentamente seu corpo de volta à posição inicial.",
+      "Repita pelo número desejado de repetições."
+    ],
+    "descriptionPt": "O exercício de barra fixa assistida é excelente para desenvolver força nas costas e bíceps, utilizando uma pegada pronada.",
+    "descriptionEn": "The assisted pull-up is a machine-based exercise that helps users perform pull-ups with added support, making it easier to lift their body weight. It primarily targets the latissimus dorsi (lats) and also engages the biceps and forearms.",
+    "difficulty": "beginner",
+    "difficultyPt": "iniciante",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": null
+  },
+  {
+    "id": "0018",
+    "name": "assisted standing triceps extension (with towel)",
+    "namePt": "extensão de tríceps assistida em pé (com toalha)",
+    "bodyPart": "upper arms",
+    "bodyPartPt": "braços",
+    "target": "triceps",
+    "targetPt": "tríceps",
+    "equipment": "assisted (towel)",
+    "equipmentPt": "assisted (towel)",
+    "secondaryMuscles": [
+      "shoulders"
+    ],
+    "secondaryMusclesPt": [
+      "ombros"
+    ],
+    "instructions": [
+      "Stand with your feet shoulder-width apart and hold a towel with both hands behind your head.",
+      "Keep your elbows close to your ears and your upper arms stationary.",
+      "Slowly extend your forearms upward, squeezing your triceps at the top.",
+      "Pause for a moment, then slowly lower the towel back down to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Fique em pé com os pés na largura dos ombros e segure uma toalha com ambas as mãos atrás da cabeça.",
+      "Mantenha os cotovelos próximos às orelhas e os braços superiores estacionários.",
+      "Estenda lentamente os antebraços para cima, contraindo os tríceps no topo.",
+      "Pause por um momento, depois abaixe lentamente a toalha de volta à posição inicial.",
+      "Repita pelo número desejado de repetições."
+    ],
+    "descriptionPt": "Este exercício foca na ativação dos tríceps, promovendo força e definição muscular na parte posterior dos braços.",
+    "descriptionEn": "The assisted standing triceps extension (with towel) is an exercise targeting the triceps using a towel for assistance. It is performed standing, with the towel held behind the head, extending the arms upward to work the triceps.",
+    "difficulty": "beginner",
+    "difficultyPt": "iniciante",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": null
+  },
+  {
+    "id": "0019",
+    "name": "assisted triceps dip (kneeling)",
+    "namePt": "mergulho de tríceps assistido (de joelhos)",
+    "bodyPart": "upper arms",
+    "bodyPartPt": "braços",
+    "target": "triceps",
+    "targetPt": "tríceps",
+    "equipment": "leverage machine",
+    "equipmentPt": "máquina",
+    "secondaryMuscles": [
+      "chest",
+      "shoulders"
+    ],
+    "secondaryMusclesPt": [
+      "peito",
+      "ombros"
+    ],
+    "instructions": [
+      "Adjust the machine to your desired weight and height.",
+      "Kneel down on the pad facing the machine, with your hands gripping the handles.",
+      "Lower your body by bending your elbows, keeping your back straight and close to the machine.",
+      "Pause for a moment at the bottom, then push yourself back up to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Ajuste a máquina para o peso e altura desejados.",
+      "Ajoelhe-se no apoio voltado para a máquina, com as mãos segurando as alças.",
+      "Abaixe seu corpo dobrando os cotovelos, mantendo as costas retas e próximas à máquina.",
+      "Pause por um momento na parte inferior, depois empurre-se de volta à posição inicial.",
+      "Repita pelo número desejado de repetições."
+    ],
+    "descriptionPt": "O mergulho de tríceps assistido é um exercício eficaz para fortalecer os tríceps, utilizando o peso do corpo como resistência.",
+    "descriptionEn": "The assisted triceps dip (kneeling) is performed on a leverage machine, allowing users to target the triceps with support, making the exercise accessible for those who may not yet have the strength for unassisted dips. It also engages the chest and shoulders as secondary muscles.",
+    "difficulty": "beginner",
+    "difficultyPt": "iniciante",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": null
+  },
+  {
+    "id": "0020",
+    "name": "balance board",
+    "namePt": "prancha de equilíbrio",
+    "bodyPart": "upper legs",
+    "bodyPartPt": "coxas",
+    "target": "quads",
+    "targetPt": "quadríceps",
+    "equipment": "body weight",
+    "equipmentPt": "peso corporal",
+    "secondaryMuscles": [
+      "calves",
+      "hamstrings",
+      "glutes"
+    ],
+    "secondaryMusclesPt": [
+      "panturrilhas",
+      "posteriores da coxa",
+      "glúteos"
+    ],
+    "instructions": [
+      "Place the balance board on a flat surface.",
+      "Step onto the balance board with one foot, ensuring it is centered.",
+      "Slowly shift your weight onto the foot on the balance board, keeping your core engaged.",
+      "Maintain your balance and stability as you hold the position for a desired amount of time.",
+      "Repeat the exercise with the other foot."
+    ],
+    "instructionsPt": [
+      "Coloque a prancha de equilíbrio em uma superfície plana.",
+      "Suba na prancha de equilíbrio com um pé, garantindo que esteja centralizado.",
+      "Desloque lentamente seu peso para o pé na prancha de equilíbrio, mantendo o core ativado.",
+      "Mantenha seu equilíbrio e estabilidade enquanto segura a posição pelo tempo desejado.",
+      "Repita o exercício com o outro pé."
+    ],
+    "descriptionPt": "A prancha de equilíbrio é um exercício que melhora a estabilidade e o controle do core, desafiando o equilíbrio corporal.",
+    "descriptionEn": "The balance board exercise involves standing on a balance board with one foot, engaging the core and lower body muscles to maintain stability and balance. This exercise primarily targets the quads, while also engaging the calves, hamstrings, and glutes as secondary muscles.",
+    "difficulty": "intermediate",
+    "difficultyPt": "intermediário",
+    "category": "balance",
+    "categoryPt": "equilíbrio",
+    "gifUrl": null
+  },
+  {
+    "id": "0022",
+    "name": "barbell pullover to press",
+    "namePt": "pullover com barra para supino",
+    "bodyPart": "back",
+    "bodyPartPt": "costas",
+    "target": "lats",
+    "targetPt": "dorsais",
+    "equipment": "barbell",
+    "equipmentPt": "barra",
+    "secondaryMuscles": [
+      "triceps",
+      "chest",
+      "shoulders"
+    ],
+    "secondaryMusclesPt": [
+      "tríceps",
+      "peito",
+      "ombros"
+    ],
+    "instructions": [
+      "Lie flat on a bench with your head at one end and your feet on the ground.",
+      "Hold the barbell with a pronated grip (palms facing away from you) and extend your arms straight above your chest.",
+      "Keeping your arms straight, lower the barbell behind your head in an arc-like motion until you feel a stretch in your lats.",
+      "Pause for a moment, then reverse the motion and press the barbell back to the starting position above your chest.",
+      "Repeat for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Deite-se de costas em um banco com a cabeça em uma extremidade e os pés no chão.",
+      "Segure a barra com uma pegada pronada (palmas voltadas para longe de você) e estenda os braços acima do peito.",
+      "Mantendo os braços retos, abaixe a barra atrás da cabeça em um movimento em arco até sentir um alongamento nas costas.",
+      "Pause por um momento, depois inverta o movimento e pressione a barra de volta à posição inicial acima do peito.",
+      "Repita pelo número desejado de repetições."
+    ],
+    "descriptionPt": "O pullover com barra para supino é um exercício que trabalha a musculatura das costas e peito, promovendo um alongamento eficaz.",
+    "descriptionEn": "The barbell pullover to press is a compound exercise that targets the lats and also works the triceps, chest, and shoulders. It involves lowering a barbell behind your head while lying on a bench, then pressing it back up over your chest.",
+    "difficulty": "intermediate",
+    "difficultyPt": "intermediário",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": null
+  },
+  {
+    "id": "0023",
+    "name": "barbell alternate biceps curl",
+    "namePt": "rosca alternada com barra",
+    "bodyPart": "upper arms",
+    "bodyPartPt": "braços",
+    "target": "biceps",
+    "targetPt": "bíceps",
+    "equipment": "barbell",
+    "equipmentPt": "barra",
+    "secondaryMuscles": [
+      "forearms"
+    ],
+    "secondaryMusclesPt": [
+      "antebraços"
+    ],
+    "instructions": [
+      "Stand up straight with your feet shoulder-width apart and hold a barbell in each hand, palms facing forward.",
+      "Keep your upper arms stationary and exhale as you curl the weights while contracting your biceps.",
+      "Continue to raise the barbells until your biceps are fully contracted and the barbells are at shoulder level.",
+      "Hold the contracted position for a brief pause as you squeeze your biceps.",
+      "Inhale as you slowly begin to lower the barbells back to the starting position.",
+      "Repeat for the desired number of repetitions, alternating arms."
+    ],
+    "instructionsPt": [
+      "Fique em pé com os pés na largura dos ombros e segure uma barra em cada mão, com as palmas voltadas para frente.",
+      "Mantenha os braços superiores estacionários e exale enquanto faz a rosca, contraindo os bíceps.",
+      "Continue levantando as barras até que seus bíceps estejam totalmente contraídos e as barras estejam na altura dos ombros.",
+      "Segure a posição contraída por uma breve pausa enquanto contrai os bíceps.",
+      "Inspire enquanto começa a abaixar lentamente as barras de volta à posição inicial.",
+      "Repita pelo número desejado de repetições, alternando os braços."
+    ],
+    "descriptionPt": "A rosca alternada com barra é um exercício que foca no desenvolvimento dos bíceps, promovendo força e definição muscular.",
+    "descriptionEn": "The barbell alternate biceps curl is a strength exercise targeting the biceps, performed by alternately curling a barbell with each arm while standing. It also engages the forearms as secondary muscles.",
+    "difficulty": "beginner",
+    "difficultyPt": "iniciante",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": null
+  },
+  {
+    "id": "0024",
+    "name": "barbell bench front squat",
+    "namePt": "agachamento frontal com barra no supino",
+    "bodyPart": "upper legs",
+    "bodyPartPt": "coxas",
+    "target": "quads",
+    "targetPt": "quadríceps",
+    "equipment": "barbell",
+    "equipmentPt": "barra",
+    "secondaryMuscles": [
+      "hamstrings",
+      "glutes",
+      "calves"
+    ],
+    "secondaryMusclesPt": [
+      "posteriores da coxa",
+      "glúteos",
+      "panturrilhas"
+    ],
+    "instructions": [
+      "Start by standing with your feet shoulder-width apart and the barbell resting on your upper chest, just below your collarbone.",
+      "Hold the barbell with an overhand grip, keeping your elbows up and your upper arms parallel to the ground.",
+      "Lower your body down into a squat position by bending at the knees and hips, keeping your back straight and your chest up.",
+      "Pause for a moment at the bottom of the squat, then push through your heels to return to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ],
+    "instructionsPt": [
+      "Comece em pé com os pés na largura dos ombros e a barra repousando no peito superior, logo abaixo da clavícula.",
+      "Segure a barra com uma pegada pronada, mantendo os cotovelos para cima e os braços superiores paralelos ao chão.",
+      "Abaixe seu corpo em uma posição de agachamento, dobrando os joelhos e quadris, mantendo as costas retas e o peito para cima.",
+      "Pause por um momento na parte inferior do agachamento, depois empurre através dos calcanhares para voltar à posição inicial.",
+      "Repita pelo número desejado de repetições."
+    ],
+    "descriptionPt": "O agachamento frontal com barra no supino é um exercício que fortalece as pernas e o core, promovendo uma postura adequada.",
+    "descriptionEn": "The barbell bench front squat is a compound lower body exercise that targets the quadriceps, with secondary emphasis on the hamstrings, glutes, and calves. It requires holding a barbell in the front rack position and performing a squat, demanding good core stability, balance, and mobility.",
+    "difficulty": "intermediate",
+    "difficultyPt": "intermediário",
+    "category": "strength",
+    "categoryPt": "força",
+    "gifUrl": null
+  }
+]

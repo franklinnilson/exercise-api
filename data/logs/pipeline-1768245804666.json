@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-01-12T19:23:24.666Z",
+  "duration": 71.169,
+  "durationMinutes": 1.2,
+  "stats": {
+    "fetched": 15,
+    "translated": 15,
+    "loaded": 0,
+    "skipped": 15,
+    "mediaDownloaded": 0,
+    "mediaSkipped": 15,
+    "mediaErrors": 0,
+    "totalGifSize": 0,
+    "totalWebpSize": 0,
+    "errors": [],
+    "tokensUsed": 5245,
+    "startTime": "2026-01-12T19:22:13.496Z"
+  },
+  "cost": 0.00173085
+}

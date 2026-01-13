@@ -1,0 +1,20 @@
+{
+  "bodyPart": "waist",
+  "equipment": "body weight",
+  "id": "0002",
+  "name": "45° side bend",
+  "target": "abs",
+  "secondaryMuscles": [
+    "obliques"
+  ],
+  "instructions": [
+    "Stand with your feet shoulder-width apart and your arms extended straight down by your sides.",
+    "Keeping your back straight and your core engaged, slowly bend your torso to one side, lowering your hand towards your knee.",
+    "Pause for a moment at the bottom, then slowly return to the starting position.",
+    "Repeat on the other side.",
+    "Continue alternating sides for the desired number of repetitions."
+  ],
+  "description": "The 45° side bend is a bodyweight exercise targeting the abdominal muscles, particularly the obliques. It involves bending the torso to the side while standing, engaging the core for stability and control.",
+  "difficulty": "beginner",
+  "category": "strength"
+}

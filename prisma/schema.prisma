@@ -1,0 +1,111 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["fullTextIndex", "fullTextSearch"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Exercise {
+  id                String   @id @db.VarChar(50)
+  name              String   @db.VarChar(255)
+  nameEn            String   @map("name_en") @db.VarChar(255)
+  bodyPart          String   @map("body_part") @db.VarChar(100)
+  bodyPartEn        String   @map("body_part_en") @db.VarChar(100)
+  target            String   @db.VarChar(100)
+  targetEn          String   @map("target_en") @db.VarChar(100)
+  equipment         String   @db.VarChar(100)
+  equipmentEn       String   @map("equipment_en") @db.VarChar(100)
+  gifUrl            String?  @map("gif_url") @db.VarChar(500)
+  videoUrl          String?  @map("video_url") @db.VarChar(500)
+  imageUrl          String?  @map("image_url") @db.VarChar(500)
+  difficulty        String?  @db.VarChar(50)
+  category          String?  @db.VarChar(100)
+  overview          String?  @db.Text
+  overviewEn        String?  @map("overview_en") @db.Text
+  deletedAt         DateTime? @map("deleted_at")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  secondaryMuscles  ExerciseSecondaryMuscle[]
+  instructions      ExerciseInstruction[]
+  tips              ExerciseTip[]
+  variations        ExerciseVariation[]
+  keywords          ExerciseKeyword[]
+
+  @@index([name], map: "idx_name")
+  @@index([nameEn], map: "idx_name_en")
+  @@index([bodyPart], map: "idx_body_part")
+  @@index([target], map: "idx_target")
+  @@index([equipment], map: "idx_equipment")
+  @@index([difficulty], map: "idx_difficulty")
+  @@index([bodyPart, equipment], map: "idx_body_part_equipment")
+  @@index([bodyPart, target], map: "idx_body_part_target")
+  @@fulltext([name], map: "ft_name")
+  @@fulltext([name, nameEn], map: "ft_name_all")
+  @@map("exercises")
+}
+
+model ExerciseSecondaryMuscle {
+  id          Int      @id @default(autoincrement())
+  exerciseId  String   @map("exercise_id") @db.VarChar(50)
+  muscle      String   @db.VarChar(100)
+  muscleEn    String   @map("muscle_en") @db.VarChar(100)
+
+  exercise    Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+
+  @@index([exerciseId])
+  @@map("exercise_secondary_muscles")
+}
+
+model ExerciseInstruction {
+  id          Int      @id @default(autoincrement())
+  exerciseId  String   @map("exercise_id") @db.VarChar(50)
+  stepOrder   Int      @map("step_order")
+  instruction String   @db.Text
+  instructionEn String @map("instruction_en") @db.Text
+
+  exercise    Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+
+  @@index([exerciseId])
+  @@map("exercise_instructions")
+}
+
+model ExerciseTip {
+  id          Int      @id @default(autoincrement())
+  exerciseId  String   @map("exercise_id") @db.VarChar(50)
+  tip         String   @db.Text
+  tipEn       String   @map("tip_en") @db.Text
+
+  exercise    Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+
+  @@index([exerciseId])
+  @@map("exercise_tips")
+}
+
+model ExerciseVariation {
+  id          Int      @id @default(autoincrement())
+  exerciseId  String   @map("exercise_id") @db.VarChar(50)
+  variation   String   @db.VarChar(255)
+  variationEn String   @map("variation_en") @db.VarChar(255)
+
+  exercise    Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+
+  @@index([exerciseId])
+  @@map("exercise_variations")
+}
+
+model ExerciseKeyword {
+  id          Int      @id @default(autoincrement())
+  exerciseId  String   @map("exercise_id") @db.VarChar(50)
+  keyword     String   @db.VarChar(255)
+  keywordEn   String   @map("keyword_en") @db.VarChar(255)
+
+  exercise    Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+
+  @@index([exerciseId])
+  @@index([keyword])
+  @@map("exercise_keywords")
+}

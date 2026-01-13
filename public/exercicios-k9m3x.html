@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olym | Exercícios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Dark theme (default) */
+      --bg-primary: #0D0D0D;
+      --bg-secondary: #141414;
+      --bg-card: #1A1A1A;
+      --bg-hover: #222222;
+      --cyan: #00FFFF;
+      --cyan-dark: #00CCCC;
+      --cyan-glow: rgba(0, 255, 255, 0.15);
+      --green: #00FF88;
+      --red: #FF6B6B;
+      --text-primary: #FFFFFF;
+      --text-secondary: #999999;
+      --text-muted: #555555;
+      --border: #2A2A2A;
+      --img-filter: hue-rotate(350deg) saturate(3) invert(0.95);
+    }
+    
+    [data-theme="light"] {
+      --bg-primary: #F5F5F5;
+      --bg-secondary: #FFFFFF;
+      --bg-card: #FAFAFA;
+      --bg-hover: #EEEEEE;
+      --cyan: #0099AA;
+      --cyan-dark: #007788;
+      --cyan-glow: rgba(0, 153, 170, 0.15);
+      --green: #00AA55;
+      --red: #DD4444;
+      --text-primary: #111111;
+      --text-secondary: #666666;
+      --text-muted: #999999;
+      --border: #DDDDDD;
+      --img-filter: hue-rotate(-188deg) saturate(5) invert(0);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg-primary); color: var(--text-primary); min-height: 100vh; transition: background 0.3s, color 0.3s; }
+    .container { max-width: 900px; margin: 0 auto; padding: 24px 20px; }
+    .header { text-align: center; padding: 32px 0; }
+    .header-subtitle { font-size: 13px; color: var(--text-muted); margin-top: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .hidden { display: none !important; }
+
+    /* Theme Toggle */
+    .theme-toggle { position: fixed; top: 20px; right: 20px; width: 44px; height: 44px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s; z-index: 100; }
+    .theme-toggle:hover { border-color: var(--cyan); transform: scale(1.05); }
+    .theme-toggle svg { width: 20px; height: 20px; color: var(--text-secondary); transition: color 0.3s; }
+    .theme-toggle:hover svg { color: var(--cyan); }
+    .sun-icon { display: none; }
+    .moon-icon { display: block; }
+    [data-theme="light"] .sun-icon { display: block; }
+    [data-theme="light"] .moon-icon { display: none; }
+
+    /* Auth Panel */
+    .auth-panel { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+    .auth-box { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; width: 100%; max-width: 420px; text-align: center; }
+    .auth-box h2 { font-size: 20px; margin: 24px 0 8px; }
+    .auth-box > p { font-size: 14px; color: var(--text-secondary); margin-bottom: 24px; }
+    .auth-field { text-align: left; margin-bottom: 16px; }
+    .auth-field label { display: block; font-size: 12px; color: var(--text-muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .auth-field input, .auth-field textarea { width: 100%; padding: 12px 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-size: 14px; font-family: inherit; transition: all 0.3s; }
+    .auth-field textarea { min-height: 80px; resize: vertical; }
+    .auth-field input:focus, .auth-field textarea:focus { outline: none; border-color: var(--cyan); }
+    .auth-error { color: var(--red); font-size: 13px; margin-bottom: 16px; min-height: 20px; }
+    .auth-btn { width: 100%; padding: 14px; background: var(--cyan); border: none; border-radius: 8px; color: #000; font-size: 15px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+    .auth-btn:hover { background: var(--cyan-dark); }
+
+    /* Header */
+    .header-top { display: flex; align-items: center; justify-content: center; gap: 16px; position: relative; }
+    .logout-btn { position: absolute; right: 0; padding: 8px 16px; background: transparent; border: 1px solid var(--border); border-radius: 6px; color: var(--text-secondary); font-size: 13px; cursor: pointer; transition: all 0.2s; }
+    .logout-btn:hover { border-color: var(--red); color: var(--red); }
+    .user-info { margin-top: 12px; padding: 8px 16px; background: var(--bg-card); border-radius: 8px; display: inline-block; }
+    .user-info span { color: var(--cyan); font-weight: 500; }
+
+    /* Stats */
+    .stats { display: flex; justify-content: center; gap: 16px; margin: 24px 0 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 16px 24px; text-align: center; min-width: 120px; }
+    .stat-val { font-size: 28px; font-weight: 700; color: var(--cyan); }
+    .stat-lbl { font-size: 12px; color: var(--text-muted); margin-top: 4px; text-transform: uppercase; }
+
+    /* Logo SVG color */
+    .logo-svg path { fill: var(--cyan); transition: fill 0.3s; }
+  </style>
+</head>
+<body>
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" onclick="toggleTheme()" title="Alternar tema">
+    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+    </svg>
+  </button>
+
+  <!-- Auth Panel -->
+  <div id="authPanel" class="auth-panel">
+    <div class="auth-box">
+      <svg class="logo-svg" width="100" height="33" viewBox="0 0 74 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21.5746 0.0693914C22.1601 -0.0867392 30.2728 0.0693914 30.2728 0.0693914C30.5238 0.0624839 31.0291 0.259427 31.0463 1.10162C31.0635 1.94433 31.2403 9.12206 31.0443 9.40729C30.8482 9.69067 30.0994 9.70706 29.9584 9.20807C29.9584 8.96912 28.3368 7.99736 27.4564 8.68951L27.4515 8.69342C26.1372 9.72762 22.89 12.2838 20.9769 22.2286C19.236 31.2779 11.8467 39.4187 4.6781 39.4903C3.53438 39.5017 3.07552 38.4081 3.57263 38.0812C6.66371 36.0481 13.093 29.6001 10.5258 28.0362L7.95935 26.4728C7.95935 26.4728 -0.236696 21.2986 0.00525328 13.0265C0.00525328 11.5534 0.178762 10.8296 0.385136 10.4845C0.591584 10.1395 1.51111 10.4845 1.51111 10.4845L1.76111 10.628C3.45165 13.4457 8.83074 18.5352 14.3529 17.0558C17.2133 16.2893 18.8114 13.3798 24.598 5.54108C25.0229 4.92345 25.0869 2.79133 21.3724 0.86529C21.3724 0.86529 20.993 0.225733 21.5746 0.0693914ZM11.8363 7.44049C13.8971 7.44049 15.5677 9.11114 15.5677 11.172C15.5675 13.2326 13.897 14.9034 11.8363 14.9034C9.77584 14.9032 8.10604 13.2325 8.10583 11.172C8.10583 9.11129 9.77571 7.44073 11.8363 7.44049Z"/>
+        <path d="M26 26.66C26 25.6467 26.1933 24.6867 26.58 23.78C26.9667 22.8733 27.5 22.0733 28.18 21.38C28.8733 20.6733 29.6733 20.12 30.58 19.72C31.4867 19.32 32.46 19.12 33.5 19.12C34.5267 19.12 35.4933 19.32 36.4 19.72C37.3067 20.12 38.1067 20.6733 38.8 21.38C39.5067 22.0733 40.0533 22.8733 40.44 23.78C40.84 24.6867 41.04 25.6467 41.04 26.66C41.04 27.7 40.84 28.6733 40.44 29.58C40.0533 30.4867 39.5067 31.2867 38.8 31.98C38.1067 32.66 37.3067 33.1933 36.4 33.58C35.4933 33.9667 34.5267 34.16 33.5 34.16C32.46 34.16 31.4867 33.9667 30.58 33.58C29.6733 33.1933 28.8733 32.66 28.18 31.98C27.5 31.2867 26.9667 30.4867 26.58 29.58C26.1933 28.6733 26 27.7 26 26.66ZM29 26.66C29 27.3133 29.1133 27.9267 29.34 28.5C29.58 29.06 29.9067 29.56 30.32 30C30.7467 30.4267 31.2333 30.76 31.78 31C32.34 31.24 32.9467 31.36 33.6 31.36C34.2267 31.36 34.8067 31.24 35.34 31C35.8867 30.76 36.36 30.4267 36.76 30C37.16 29.56 37.4733 29.06 37.7 28.5C37.9267 27.9267 38.04 27.3133 38.04 26.66C38.04 25.9933 37.92 25.3733 37.68 24.8C37.4533 24.2267 37.1333 23.7267 36.72 23.3C36.32 22.86 35.8467 22.52 35.3 22.28C34.7533 22.04 34.16 21.92 33.52 21.92C32.88 21.92 32.2867 22.04 31.74 22.28C31.1933 22.52 30.7133 22.86 30.3 23.3C29.8867 23.7267 29.5667 24.2267 29.34 24.8C29.1133 25.3733 29 25.9933 29 26.66ZM42.8712 18.22H45.6712V34H42.8712V18.22ZM48.6548 38.2L54.4748 25.26H56.9948L51.3548 38.2H48.6548ZM50.9948 34.04L46.7148 25.26H49.8548L53.1548 32.64L50.9948 34.04ZM60.5784 25.26L60.7984 26.8L60.7584 26.68C61.1051 26.0933 61.5384 25.64 62.0584 25.32C62.5784 24.9867 63.2051 24.82 63.9384 24.82C64.4184 24.82 64.8384 24.8867 65.1984 25.02C65.5718 25.1533 65.8851 25.3533 66.1384 25.62C66.3918 25.8733 66.5651 26.2067 66.6584 26.62L66.5584 26.64C66.9318 26.0933 67.3784 25.6533 67.8984 25.32C68.4318 24.9867 68.9851 24.82 69.5584 24.82C70.4251 24.82 71.1118 25.0667 71.6184 25.56C72.1384 26.04 72.4051 26.6667 72.4184 27.44V34H69.6384V28.6C69.6251 28.2133 69.5651 27.9 69.4584 27.66C69.3518 27.4067 69.1051 27.2667 68.7184 27.24C68.2651 27.24 67.8784 27.4 67.5584 27.72C67.2518 28.0267 67.0184 28.4267 66.8584 28.92C66.7118 29.4 66.6384 29.9 66.6384 30.42V34H63.8384V28.6C63.8251 28.2133 63.7518 27.9 63.6184 27.66C63.4984 27.4067 63.2451 27.2667 62.8584 27.24C62.4184 27.24 62.0451 27.4 61.7384 27.72C61.4451 28.0267 61.2184 28.42 61.0584 28.9C60.9118 29.38 60.8384 29.8733 60.8384 30.38V34H58.0384V25.26H60.5784Z"/>
+      </svg>
+      <h2>Autenticação</h2>
+      <p>Cole suas credenciais para acessar a API de Exercícios</p>
+      <div class="auth-field">
+        <label>API Key</label>
+        <input type="text" id="apiKeyInput" placeholder="Cole a API Key aqui..." />
+      </div>
+      <div class="auth-field">
+        <label>Token JWT (Supabase)</label>
+        <textarea id="tokenInput" placeholder="Cole o token JWT do usuário logado..."></textarea>
+      </div>
+      <div id="authError" class="auth-error"></div>
+      <button onclick="authenticate()" class="auth-btn">Conectar</button>
+    </div>
+  </div>
+
+  <!-- Main Content (hidden until auth) -->
+  <div id="mainContent" class="hidden">
+    <div class="container">
+      <header class="header">
+        <div class="header-top">
+          <svg class="logo-svg" width="120" height="40" viewBox="0 0 74 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.5746 0.0693914C22.1601 -0.0867392 30.2728 0.0693914 30.2728 0.0693914C30.5238 0.0624839 31.0291 0.259427 31.0463 1.10162C31.0635 1.94433 31.2403 9.12206 31.0443 9.40729C30.8482 9.69067 30.0994 9.70706 29.9584 9.20807C29.9584 8.96912 28.3368 7.99736 27.4564 8.68951L27.4515 8.69342C26.1372 9.72762 22.89 12.2838 20.9769 22.2286C19.236 31.2779 11.8467 39.4187 4.6781 39.4903C3.53438 39.5017 3.07552 38.4081 3.57263 38.0812C6.66371 36.0481 13.093 29.6001 10.5258 28.0362L7.95935 26.4728C7.95935 26.4728 -0.236696 21.2986 0.00525328 13.0265C0.00525328 11.5534 0.178762 10.8296 0.385136 10.4845C0.591584 10.1395 1.51111 10.4845 1.51111 10.4845L1.76111 10.628C3.45165 13.4457 8.83074 18.5352 14.3529 17.0558C17.2133 16.2893 18.8114 13.3798 24.598 5.54108C25.0229 4.92345 25.0869 2.79133 21.3724 0.86529C21.3724 0.86529 20.993 0.225733 21.5746 0.0693914ZM11.8363 7.44049C13.8971 7.44049 15.5677 9.11114 15.5677 11.172C15.5675 13.2326 13.897 14.9034 11.8363 14.9034C9.77584 14.9032 8.10604 13.2325 8.10583 11.172C8.10583 9.11129 9.77571 7.44073 11.8363 7.44049Z"/>
+            <path d="M26 26.66C26 25.6467 26.1933 24.6867 26.58 23.78C26.9667 22.8733 27.5 22.0733 28.18 21.38C28.8733 20.6733 29.6733 20.12 30.58 19.72C31.4867 19.32 32.46 19.12 33.5 19.12C34.5267 19.12 35.4933 19.32 36.4 19.72C37.3067 20.12 38.1067 20.6733 38.8 21.38C39.5067 22.0733 40.0533 22.8733 40.44 23.78C40.84 24.6867 41.04 25.6467 41.04 26.66C41.04 27.7 40.84 28.6733 40.44 29.58C40.0533 30.4867 39.5067 31.2867 38.8 31.98C38.1067 32.66 37.3067 33.1933 36.4 33.58C35.4933 33.9667 34.5267 34.16 33.5 34.16C32.46 34.16 31.4867 33.9667 30.58 33.58C29.6733 33.1933 28.8733 32.66 28.18 31.98C27.5 31.2867 26.9667 30.4867 26.58 29.58C26.1933 28.6733 26 27.7 26 26.66ZM29 26.66C29 27.3133 29.1133 27.9267 29.34 28.5C29.58 29.06 29.9067 29.56 30.32 30C30.7467 30.4267 31.2333 30.76 31.78 31C32.34 31.24 32.9467 31.36 33.6 31.36C34.2267 31.36 34.8067 31.24 35.34 31C35.8867 30.76 36.36 30.4267 36.76 30C37.16 29.56 37.4733 29.06 37.7 28.5C37.9267 27.9267 38.04 27.3133 38.04 26.66C38.04 25.9933 37.92 25.3733 37.68 24.8C37.4533 24.2267 37.1333 23.7267 36.72 23.3C36.32 22.86 35.8467 22.52 35.3 22.28C34.7533 22.04 34.16 21.92 33.52 21.92C32.88 21.92 32.2867 22.04 31.74 22.28C31.1933 22.52 30.7133 22.86 30.3 23.3C29.8867 23.7267 29.5667 24.2267 29.34 24.8C29.1133 25.3733 29 25.9933 29 26.66ZM42.8712 18.22H45.6712V34H42.8712V18.22ZM48.6548 38.2L54.4748 25.26H56.9948L51.3548 38.2H48.6548ZM50.9948 34.04L46.7148 25.26H49.8548L53.1548 32.64L50.9948 34.04ZM60.5784 25.26L60.7984 26.8L60.7584 26.68C61.1051 26.0933 61.5384 25.64 62.0584 25.32C62.5784 24.9867 63.2051 24.82 63.9384 24.82C64.4184 24.82 64.8384 24.8867 65.1984 25.02C65.5718 25.1533 65.8851 25.3533 66.1384 25.62C66.3918 25.8733 66.5651 26.2067 66.6584 26.62L66.5584 26.64C66.9318 26.0933 67.3784 25.6533 67.8984 25.32C68.4318 24.9867 68.9851 24.82 69.5584 24.82C70.4251 24.82 71.1118 25.0667 71.6184 25.56C72.1384 26.04 72.4051 26.6667 72.4184 27.44V34H69.6384V28.6C69.6251 28.2133 69.5651 27.9 69.4584 27.66C69.3518 27.4067 69.1051 27.2667 68.7184 27.24C68.2651 27.24 67.8784 27.4 67.5584 27.72C67.2518 28.0267 67.0184 28.4267 66.8584 28.92C66.7118 29.4 66.6384 29.9 66.6384 30.42V34H63.8384V28.6C63.8251 28.2133 63.7518 27.9 63.6184 27.66C63.4984 27.4067 63.2451 27.2667 62.8584 27.24C62.4184 27.24 62.0451 27.4 61.7384 27.72C61.4451 28.0267 61.2184 28.42 61.0584 28.9C60.9118 29.38 60.8384 29.8733 60.8384 30.38V34H58.0384V25.26H60.5784Z"/>
+          </svg>
+          <button onclick="logout()" class="logout-btn">Sair</button>
+        </div>
+        <p class="header-subtitle">Biblioteca de Exercícios</p>
+        <div id="userInfo" class="user-info"></div>
+      </header>
+      <div class="stats" id="stats"></div>
+      <div class="search-section">
+        <div class="search-box">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          <input type="text" id="search" class="search-input" placeholder="Buscar exercícios (ex: supino, agachamento, rosca...)" />
+        </div>
+        <div class="search-meta">
+          <select id="bodyPart" class="filter-select">
+            <option value="">Todas partes do corpo</option>
+          </select>
+          <select id="equipment" class="filter-select">
+            <option value="">Todos equipamentos</option>
+          </select>
+          <span class="results-info"><span id="total">0</span> exercícios</span>
+        </div>
+      </div>
+      <div id="results" class="results-list"></div>
+      <div id="pagination" class="pagination"></div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <style>
+    /* Search */
+    .search-section { margin-bottom: 24px; }
+    .search-box { position: relative; margin-bottom: 12px; }
+    .search-icon { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted); }
+    .search-input { width: 100%; padding: 16px 20px 16px 52px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; color: var(--text-primary); font-size: 16px; font-family: inherit; transition: all 0.3s; }
+    .search-input:focus { outline: none; border-color: var(--cyan); box-shadow: 0 0 0 3px var(--cyan-glow); }
+    .search-input::placeholder { color: var(--text-muted); }
+    .search-meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .filter-select { padding: 10px 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-size: 14px; font-family: inherit; cursor: pointer; transition: all 0.3s; }
+    .filter-select:focus { outline: none; border-color: var(--cyan); }
+    .results-info { font-size: 14px; color: var(--text-secondary); margin-left: auto; }
+    .results-info span { color: var(--cyan); font-weight: 600; }
+
+    /* Results */
+    .results-list { display: flex; flex-direction: column; gap: 8px; }
+    .exercise-item { display: flex; align-items: center; padding: 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; cursor: pointer; transition: all 0.2s; }
+    .exercise-item:hover { background: var(--bg-hover); border-color: var(--cyan); transform: translateX(4px); }
+    .exercise-info { flex: 1; min-width: 0; }
+    .exercise-name { font-size: 15px; font-weight: 500; color: var(--text-primary); margin-bottom: 6px; }
+    .exercise-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .tag { font-size: 12px; padding: 4px 10px; border-radius: 6px; background: var(--bg-card); color: var(--text-secondary); border: 1px solid var(--border); transition: all 0.3s; }
+    .tag.hl { background: var(--cyan-glow); color: var(--cyan); border-color: var(--cyan); }
+    .badge { font-size: 11px; padding: 4px 10px; border-radius: 6px; font-weight: 600; }
+    .badge.yes { background: rgba(0,255,136,.15); color: var(--green); }
+    .badge.no { background: rgba(255,107,107,.15); color: var(--red); }
+    .loading, .empty { text-align: center; padding: 48px 20px; color: var(--text-muted); }
+    .spinner { width: 32px; height: 32px; border: 3px solid var(--border); border-top-color: var(--cyan); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 12px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Modal */
+    .modal { display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(4px); z-index: 1000; padding: 20px; overflow-y: auto; }
+    .modal.active { display: flex; justify-content: center; align-items: flex-start; padding-top: 60px; }
+    .modal-content { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; width: 100%; max-width: 600px; position: relative; animation: modalIn 0.2s ease; }
+    @keyframes modalIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+    .modal-close { position: absolute; top: 16px; right: 16px; width: 36px; height: 36px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; z-index: 10; }
+    .modal-close:hover { background: var(--bg-hover); color: var(--text-primary); }
+    .modal-header { padding: 24px 24px 0; }
+    .modal-title { font-size: 20px; font-weight: 600; color: var(--text-primary); padding-right: 40px; margin-bottom: 4px; }
+    .modal-title-en { font-size: 14px; color: var(--text-muted); margin-bottom: 12px; }
+    .modal-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .modal-body { padding: 24px; }
+    
+    /* GIF with theme filter */
+    .gif-container { text-align: center; margin-bottom: 24px; }
+    .gif-container img { max-width: 100%; border-radius: 12px; border: 1px solid var(--border); filter: var(--img-filter); transition: filter 0.3s; }
+    .no-gif { padding: 40px; background: var(--bg-card); border-radius: 12px; color: var(--text-muted); font-size: 14px; }
+    
+    .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
+    .info-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; text-align: center; transition: all 0.3s; }
+    .info-card.highlight { background: linear-gradient(135deg, var(--cyan-glow) 0%, transparent 100%); border-color: var(--cyan); }
+    .info-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .info-value { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+    .info-card.highlight .info-value { color: var(--cyan); }
+    .section { margin-bottom: 24px; }
+    .section h3 { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .section h3 svg { color: var(--cyan); }
+    .muscles-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .instructions-list { list-style: none; }
+    .instructions-list li { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+    .instructions-list li:last-child { border-bottom: none; }
+    .step-num { width: 28px; height: 28px; background: var(--cyan-glow); border: 1px solid var(--cyan); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: var(--cyan); flex-shrink: 0; }
+    .step-text { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+    @media (max-width: 500px) { .info-grid { grid-template-columns: 1fr; } .search-meta { flex-direction: column; align-items: stretch; } .results-info { margin-left: 0; text-align: center; } }
+
+    /* Pagination */
+    .pagination { display: flex; justify-content: center; align-items: center; gap: 12px; padding: 24px 0; }
+    .pagination button { padding: 10px 18px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-size: 14px; font-family: inherit; cursor: pointer; transition: all 0.2s; }
+    .pagination button:hover:not(:disabled) { background: var(--bg-hover); border-color: var(--cyan); }
+    .pagination button:disabled { opacity: 0.4; cursor: not-allowed; }
+    .page-info { font-size: 14px; color: var(--text-secondary); }
+    .page-info span { color: var(--cyan); }
+
+    /* Suggestions */
+    .suggestions { margin-top: 24px; padding: 20px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; }
+    .suggestions-title { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+    .suggestions-list { display: flex; flex-direction: column; gap: 8px; }
+  </style>
+
+  <script>
+    const API_URL = window.location.origin;
+    let apiKey = localStorage.getItem('olym_exercises_api_key') || '';
+    let token = localStorage.getItem('olym_exercises_token') || '';
+    let exercises = [];
+    let bodyParts = [];
+    let equipments = [];
+    let currentPage = 1;
+    let totalPages = 1;
+
+    // Theme management
+    function initTheme() {
+      const saved = localStorage.getItem('olym_theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+      } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('olym_theme', next);
+    }
+
+    // Check if already authenticated
+    function checkAuth() {
+      if (apiKey && token) {
+        showMainContent();
+        loadFilters();
+        loadStats();
+        loadExercises();
+      }
+    }
+
+    // Authenticate
+    async function authenticate() {
+      const key = document.getElementById('apiKeyInput').value.trim();
+      const jwt = document.getElementById('tokenInput').value.trim();
+      const errorEl = document.getElementById('authError');
+      
+      if (!key || !jwt) {
+        errorEl.textContent = 'Preencha todos os campos';
+        return;
+      }
+      
+      errorEl.textContent = 'Verificando...';
+      
+      try {
+        const res = await fetch(`${API_URL}/health`, {
+          headers: { 'x-api-key': key, 'Authorization': `Bearer ${jwt}` }
+        });
+        
+        if (res.ok) {
+          apiKey = key;
+          token = jwt;
+          localStorage.setItem('olym_exercises_api_key', key);
+          localStorage.setItem('olym_exercises_token', jwt);
+          showMainContent();
+          loadFilters();
+          loadStats();
+          loadExercises();
+        } else {
+          errorEl.textContent = 'Credenciais inválidas';
+        }
+      } catch (err) {
+        errorEl.textContent = 'Erro ao conectar com a API';
+      }
+    }
+
+    // Show main content
+    function showMainContent() {
+      document.getElementById('authPanel').classList.add('hidden');
+      document.getElementById('mainContent').classList.remove('hidden');
+      
+      // Decode JWT to show user info
+      try {
+        const payload = JSON.parse(atob(token.split('.')[1]));
+        const name = payload.user_metadata?.name || payload.email || 'Usuário';
+        document.getElementById('userInfo').innerHTML = `Logado como: <span>${name}</span>`;
+      } catch (e) {}
+      
+      document.getElementById('search').focus();
+    }
+
+    // Logout
+    function logout() {
+      localStorage.removeItem('olym_exercises_api_key');
+      localStorage.removeItem('olym_exercises_token');
+      apiKey = '';
+      token = '';
+      document.getElementById('authPanel').classList.remove('hidden');
+      document.getElementById('mainContent').classList.add('hidden');
+      document.getElementById('apiKeyInput').value = '';
+      document.getElementById('tokenInput').value = '';
+      document.getElementById('authError').textContent = '';
+    }
+
+    // Fetch with auth headers
+    async function apiFetch(url) {
+      return fetch(url, {
+        headers: { 'x-api-key': apiKey, 'Authorization': `Bearer ${token}` }
+      });
+    }
+
+    // Load filters
+    async function loadFilters() {
+      try {
+        const res = await apiFetch(`${API_URL}/exercises/stats`);
+        if (res.status === 401) { logout(); return; }
+        const data = await res.json();
+        
+        bodyParts = data.bodyParts || [];
+        equipments = data.equipments || [];
+        
+        const bodyPartSelect = document.getElementById('bodyPart');
+        bodyPartSelect.innerHTML = '<option value="">Todas partes do corpo</option>' + 
+          bodyParts.map(bp => `<option value="${bp}">${bp}</option>`).join('');
+        
+        const equipmentSelect = document.getElementById('equipment');
+        equipmentSelect.innerHTML = '<option value="">Todos equipamentos</option>' + 
+          equipments.map(eq => `<option value="${eq}">${eq}</option>`).join('');
+      } catch (err) {
+        console.error('Erro ao carregar filtros:', err);
+      }
+    }
+
+    // Load stats
+    async function loadStats() {
+      try {
+        const res = await apiFetch(`${API_URL}/exercises/stats`);
+        if (res.status === 401) { logout(); return; }
+        const data = await res.json();
+        document.getElementById('stats').innerHTML = `
+          <div class="stat">
+            <div class="stat-val">${data.total}</div>
+            <div class="stat-lbl">Total</div>
+          </div>
+          <div class="stat">
+            <div class="stat-val">${data.withMedia}</div>
+            <div class="stat-lbl">Com Mídia</div>
+          </div>
+          <div class="stat">
+            <div class="stat-val">${data.bodyParts?.length || 0}</div>
+            <div class="stat-lbl">Grupos</div>
+          </div>
+        `;
+      } catch (err) {
+        console.error('Erro ao carregar stats:', err);
+      }
+    }
+
+    // Load exercises
+    async function loadExercises() {
+      const q = document.getElementById('search').value;
+      const bodyPart = document.getElementById('bodyPart').value;
+      const equipment = document.getElementById('equipment').value;
+      
+      const params = new URLSearchParams({ page: currentPage, size: 20 });
+      if (q) params.append('q', q);
+      if (bodyPart) params.append('bodyPart', bodyPart);
+      if (equipment) params.append('equipment', equipment);
+
+      document.getElementById('results').innerHTML = `<div class="loading"><div class="spinner"></div><p>Buscando...</p></div>`;
+
+      try {
+        const res = await apiFetch(`${API_URL}/exercises?${params}`);
+        if (res.status === 401) { logout(); return; }
+        const response = await res.json();
+        
+        exercises = response.data || [];
+        totalPages = response.meta?.totalPages || 1;
+        const total = response.meta?.total || 0;
+        
+        document.getElementById('total').textContent = total.toLocaleString('pt-BR');
+        
+        if (exercises.length === 0) {
+          let html = `<div class="empty">Nenhum exercício encontrado</div>`;
+          
+          // Mostrar sugestões se houver
+          if (response.suggestions?.exercises?.length) {
+            html += `<div class="suggestions">
+              <p class="suggestions-title">${response.suggestions.message}</p>
+              <div class="suggestions-list">
+                ${response.suggestions.exercises.map(ex => `
+                  <div class="exercise-item" onclick="showExercise('${ex.id}')">
+                    <div class="exercise-info">
+                      <div class="exercise-name">${ex.name}</div>
+                      <div class="exercise-meta">
+                        <span class="tag hl">${ex.bodyPart}</span>
+                        <span class="tag">${ex.target}</span>
+                      </div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>`;
+          }
+          
+          document.getElementById('results').innerHTML = html;
+          document.getElementById('pagination').innerHTML = '';
+          return;
+        }
+
+        document.getElementById('results').innerHTML = exercises.map(ex => `
+          <div class="exercise-item" onclick="showExercise('${ex.id}')">
+            <div class="exercise-info">
+              <div class="exercise-name">${ex.name}</div>
+              <div class="exercise-meta">
+                <span class="tag hl">${ex.bodyPart}</span>
+                <span class="tag">${ex.target}</span>
+                <span class="tag">${ex.equipment}</span>
+                ${ex.gifUrl || ex.imageUrl ? '<span class="badge yes">Mídia</span>' : '<span class="badge no">Sem mídia</span>'}
+              </div>
+            </div>
+          </div>
+        `).join('');
+
+        // Paginação
+        if (totalPages > 1) {
+          document.getElementById('pagination').innerHTML = `
+            <button onclick="prevPage()" ${currentPage <= 1 ? 'disabled' : ''}>← Anterior</button>
+            <span class="page-info">Página <span>${currentPage}</span> de <span>${totalPages}</span></span>
+            <button onclick="nextPage()" ${currentPage >= totalPages ? 'disabled' : ''}>Próxima →</button>
+          `;
+        } else {
+          document.getElementById('pagination').innerHTML = '';
+        }
+      } catch (err) {
+        document.getElementById('results').innerHTML = `<div class="empty">Erro ao conectar com a API</div>`;
+        console.error(err);
+      }
+    }
+
+    function prevPage() { if (currentPage > 1) { currentPage--; loadExercises(); } }
+    function nextPage() { if (currentPage < totalPages) { currentPage++; loadExercises(); } }
+
+    // Show exercise details
+    async function showExercise(id) {
+      try {
+        const res = await apiFetch(`${API_URL}/exercises/${id}`);
+        if (res.status === 401) { logout(); return; }
+        const ex = await res.json();
+
+        const instructions = ex.instructions || [];
+
+        document.getElementById('modalBody').innerHTML = `
+          <div class="modal-header">
+            <h2 class="modal-title">${ex.name}</h2>
+            <p class="modal-title-en">${ex.nameEn}</p>
+            <div class="modal-tags">
+              <span class="tag hl">${ex.bodyPart}</span>
+              <span class="tag">${ex.target}</span>
+              <span class="tag">${ex.equipment}</span>
+            </div>
+          </div>
+          <div class="modal-body">
+            ${ex.gifUrl || ex.imageUrl ? `
+              <div class="gif-container">
+                <img src="${ex.gifUrl || ex.imageUrl}" alt="${ex.name}" />
+              </div>
+            ` : `
+              <div class="gif-container">
+                <div class="no-gif">Mídia não disponível</div>
+              </div>
+            `}
+            
+            <div class="info-grid">
+              <div class="info-card highlight">
+                <div class="info-label">Parte do Corpo</div>
+                <div class="info-value">${ex.bodyPart}</div>
+              </div>
+              <div class="info-card">
+                <div class="info-label">Músculo Alvo</div>
+                <div class="info-value">${ex.target}</div>
+              </div>
+              <div class="info-card">
+                <div class="info-label">Equipamento</div>
+                <div class="info-value">${ex.equipment}</div>
+              </div>
+            </div>
+
+            ${ex.secondaryMuscles?.length ? `
+              <div class="section">
+                <h3>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v20M2 12h20"/>
+                  </svg>
+                  Músculos Secundários
+                </h3>
+                <div class="muscles-list">
+                  ${ex.secondaryMuscles.map(m => `<span class="tag">${m.muscle}</span>`).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            ${instructions.length ? `
+              <div class="section">
+                <h3>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 11l3 3L22 4"/>
+                    <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                  </svg>
+                  Instruções
+                </h3>
+                <ol class="instructions-list">
+                  ${instructions.map((inst, i) => `
+                    <li>
+                      <span class="step-num">${i + 1}</span>
+                      <span class="step-text">${inst.instruction}</span>
+                    </li>
+                  `).join('')}
+                </ol>
+              </div>
+            ` : ''}
+          </div>
+        `;
+
+        document.getElementById('modal').classList.add('active');
+      } catch (err) {
+        console.error('Erro ao carregar exercício:', err);
+      }
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.remove('active');
+    }
+
+    // Event listeners
+    let searchTimeout;
+    document.getElementById('search').addEventListener('input', () => {
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(() => { currentPage = 1; loadExercises(); }, 300);
+    });
+    document.getElementById('bodyPart').addEventListener('change', () => { currentPage = 1; loadExercises(); });
+    document.getElementById('equipment').addEventListener('change', () => { currentPage = 1; loadExercises(); });
+    document.getElementById('modal').addEventListener('click', (e) => { if (e.target.id === 'modal') closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+    document.getElementById('tokenInput').addEventListener('keydown', (e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); authenticate(); } });
+
+    // Init
+    initTheme();
+    checkAuth();
+  </script>
+</body>
+</html>

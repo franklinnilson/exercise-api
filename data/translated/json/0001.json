@@ -1,0 +1,38 @@
+{
+  "exerciseId": "0001",
+  "name": "3/4 sit-up",
+  "bodyPart": "waist",
+  "target": "abs",
+  "equipment": "body weight",
+  "secondaryMuscles": [
+    "hip flexors",
+    "lower back"
+  ],
+  "instructions": [
+    "Lie flat on your back with your knees bent and feet flat on the ground.",
+    "Place your hands behind your head with your elbows pointing outwards.",
+    "Engaging your abs, slowly lift your upper body off the ground, curling forward until your torso is at a 45-degree angle.",
+    "Pause for a moment at the top, then slowly lower your upper body back down to the starting position.",
+    "Repeat for the desired number of repetitions."
+  ],
+  "description": "The 3/4 sit-up is an abdominal exercise performed with body weight. It involves curling the torso up to a 45-degree angle, engaging the abs, hip flexors, and lower back. This movement is commonly used to build core strength and stability.",
+  "difficulty": "beginner",
+  "category": "strength",
+  "bodyPartPt": "abdômen",
+  "targetPt": "abdominais",
+  "equipmentPt": "peso corporal",
+  "difficultyPt": "iniciante",
+  "namePt": "Abdominal 3/4",
+  "descriptionPt": "O abdominal 3/4 é um exercício abdominal realizado com o peso do corpo. Envolve curvar o tronco até um ângulo de 45 graus, ativando os músculos abdominais, flexores do quadril e parte inferior das costas. Este movimento é comumente utilizado para fortalecer e estabilizar o core.",
+  "secondaryMusclesPt": [
+    "flexores do quadril",
+    "parte inferior das costas"
+  ],
+  "instructionsPt": [
+    "Deite-se de costas com os joelhos flexionados e os pés apoiados no chão.",
+    "Coloque as mãos atrás da cabeça com os cotovelos apontando para fora.",
+    "Contraindo os abdômen, levante lentamente a parte superior do corpo do chão, curvando-se para frente até que o tronco esteja em um ângulo de 45 graus.",
+    "Pausa por um momento no topo, depois abaixe lentamente a parte superior do corpo de volta à posição inicial.",
+    "Repita pelo número desejado de repetições."
+  ]
+}

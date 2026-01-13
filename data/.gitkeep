@@ -1,0 +1,11 @@
+# Estrutura de diretórios do ETL Pipeline (Operação Fortaleza)
+#
+# data/
+# ├── raw/
+# │   ├── json/          # JSONs originais da API (Fase 1)
+# │   └── media/         # GIFs/MP4s originais (Fase 1)
+# ├── optimized/
+# │   └── media/         # WebPs otimizados (Fase 2)
+# ├── translated/
+# │   └── json/          # JSONs traduzidos (Fase 3)
+# └── logs/              # Relatórios e logs de erro

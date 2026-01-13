@@ -1,0 +1,35 @@
+{
+  "exerciseId": "0003",
+  "name": "air bike",
+  "bodyPart": "waist",
+  "target": "abs",
+  "equipment": "body weight",
+  "secondaryMuscles": [
+    "hip flexors"
+  ],
+  "instructions": [
+    "Lie flat on your back with your hands placed behind your head.",
+    "Lift your legs off the ground and bend your knees at a 90-degree angle.",
+    "Bring your right elbow towards your left knee while simultaneously straightening your right leg.",
+    "Return to the starting position and repeat the movement on the opposite side, bringing your left elbow towards your right knee while straightening your left leg.",
+    "Continue alternating sides in a pedaling motion for the desired number of repetitions."
+  ],
+  "difficulty": "beginner",
+  "category": "strength",
+  "namePt": "bicicleta no solo",
+  "bodyPartPt": "abdômen",
+  "targetPt": "abdominais",
+  "equipmentPt": "peso corporal",
+  "difficultyPt": "iniciante",
+  "descriptionPt": "A bicicleta no solo é um exercício eficaz para fortalecer a musculatura abdominal e melhorar a resistência do core. Ele envolve a ativação dos músculos oblíquos e reto abdominal, promovendo um trabalho dinâmico e funcional.",
+  "secondaryMusclesPt": [
+    "flexores do quadril"
+  ],
+  "instructionsPt": [
+    "Deite-se de costas com as mãos posicionadas atrás da cabeça.",
+    "Levante as pernas do chão e dobre os joelhos em um ângulo de 90 graus.",
+    "Traga o cotovelo direito em direção ao joelho esquerdo enquanto simultaneamente estica a perna direita.",
+    "Retorne à posição inicial e repita o movimento do lado oposto, trazendo o cotovelo esquerdo em direção ao joelho direito enquanto estica a perna esquerda.",
+    "Continue alternando os lados em um movimento de pedalada pelo número desejado de repetições."
+  ]
+}
